@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\Client\HomeController@index')->name('home');
 Route::get('/docs', 'App\Http\Controllers\Client\DocsController@index')->name('docs');
 Route::get('/news', 'App\Http\Controllers\Client\NewsController@index')->name('news');
+Route::get('/gallery', 'App\Http\Controllers\Client\GalleryController@index')->name('gallery');
 
 // Route::get('/', 'app\Http\Controllers\client\HomeController@index');
 
