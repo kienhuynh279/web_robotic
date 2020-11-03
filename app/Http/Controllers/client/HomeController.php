@@ -4,6 +4,7 @@ namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Docs;
 
 class HomeController extends Controller
 {
@@ -13,4 +14,6 @@ class HomeController extends Controller
             "title" => "Trang chủ"
         ]);
     }
+
+
 }
