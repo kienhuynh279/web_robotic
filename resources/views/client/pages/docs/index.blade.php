@@ -11,10 +11,10 @@ Trang tài liệu
     <div class="row py-5">
         <div class="col-md-6 mb-5">
             <div class="card">
-                <img class="card-img-top" src="{{ asset('assets/client/img/595x483/01.jpg')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">5 Top robotics Solutions Impacting Hospital Care During A</h4>
-                </div>
+                    <img class="card-img-top" src="{{ asset('assets/client/img/595x483/01.jpg')}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">5 Top robotics Solutions Impacting Hospital Care During A</h4>
+                    </div>
             </div>
         </div>
         <div class="col-md-6 mb-5">
