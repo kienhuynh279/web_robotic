@@ -7,6 +7,7 @@
 @section('content')
 <!-- Features -->
 <div class="section-seperator">
+    @include('client.components.banner')
     <div class="content-md container">
         <div class="row">
             <div class="col-sm-4 sm-margin-b-50">
