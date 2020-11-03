@@ -10,9 +10,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('client.index',[
-            'title' => 'Home',
-            'page' => 'home.index'
+        return view("client.index")->with([
+            "title" => "Trang chủ"
         ]);
     }
 

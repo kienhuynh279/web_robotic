@@ -8,7 +8,7 @@
                         </button>
                         <div class="navbar-logo">
                             <a class="navbar-logo-wrap" href="{{ route('home') }}">
-                                <img class="navbar-logo-img" src="{{ asset('asset/client/img/logo.png') }}" alt="Acidus Logo">
+                                <img class="navbar-logo-img" src="{{ asset('assets/client/img/logo.png') }}" alt="Acidus Logo">
                             </a>
                         </div>
                     </div>
