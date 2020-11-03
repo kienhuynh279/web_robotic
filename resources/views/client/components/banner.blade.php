@@ -1,4 +1,4 @@
-<div class="container px-0">
+<div class="container-fluid px-0">
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
