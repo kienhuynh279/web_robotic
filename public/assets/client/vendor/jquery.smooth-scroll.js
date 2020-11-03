@@ -264,7 +264,7 @@ function scrollArray(elem, left, top, delay) {
  * @param {Object} event
  */
 function wheel(event) {
-    event.preventDefault();
+    // event.preventDefault();
  
     if (!initDone) {
         init();
