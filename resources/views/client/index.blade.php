@@ -76,7 +76,7 @@
             <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-6">
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/595x483/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/595x483/01.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -88,7 +88,7 @@
             <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/595x240/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/595x240/01.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -101,7 +101,7 @@
             <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/595x240/02.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/595x240/02.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -118,7 +118,7 @@
             <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-6">
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/595x483/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/595x483/01.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -131,7 +131,7 @@
             <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/595x240/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/595x240/01.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -144,7 +144,7 @@
             <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/595x240/02.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/595x240/02.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -174,23 +174,23 @@
                 <!-- Swiper Wrapper -->
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="swiper-clients-img" src="{{ asset('asset/client/img/clients/01.png') }}"
+                        <img class="swiper-clients-img" src="{{ asset('assets/client/img/clients/01.png') }}"
 alt="Clients Logo">
 </div>
 <div class="swiper-slide">
-    <img class="swiper-clients-img" src="{{ asset('asset/client/img/clients/02.png') }}" alt="Clients Logo">
+    <img class="swiper-clients-img" src="{{ asset('assets/client/img/clients/02.png') }}" alt="Clients Logo">
 </div>
 <div class="swiper-slide">
-    <img class="swiper-clients-img" src="{{ asset('asset/client/img/clients/03.png') }}" alt="Clients Logo">
+    <img class="swiper-clients-img" src="{{ asset('assets/client/img/clients/03.png') }}" alt="Clients Logo">
 </div>
 <div class="swiper-slide">
-    <img class="swiper-clients-img" src="{{ asset('asset/client/img/clients/04.png') }}" alt="Clients Logo">
+    <img class="swiper-clients-img" src="{{ asset('assets/client/img/clients/04.png') }}" alt="Clients Logo">
 </div>
 <div class="swiper-slide">
-    <img class="swiper-clients-img" src="{{ asset('asset/client/img/clients/05.png') }}" alt="Clients Logo">
+    <img class="swiper-clients-img" src="{{ asset('assets/client/img/clients/05.png') }}" alt="Clients Logo">
 </div>
 <div class="swiper-slide">
-    <img class="swiper-clients-img" src="{{ asset('asset/client/img/clients/06.png') }}" alt="Clients Logo">
+    <img class="swiper-clients-img" src="{{ asset('assets/client/img/clients/06.png') }}" alt="Clients Logo">
 </div>
 </div>
 <!-- End Swiper Wrapper -->
@@ -218,7 +218,7 @@ alt="Clients Logo">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/800x400/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/800x400/01.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -233,7 +233,7 @@ alt="Clients Logo">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/397x400/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x400/01.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -248,7 +248,7 @@ alt="Clients Logo">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/397x300/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x300/01.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -263,7 +263,7 @@ alt="Clients Logo">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/397x300/02.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x300/02.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -278,7 +278,7 @@ alt="Clients Logo">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('asset/client/img/397x300/03.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x300/03.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -363,7 +363,7 @@ alt="Clients Logo">
             <div class="col-sm-4 sm-margin-b-50">
                 <div class="bg-color-white margin-b-20">
                     <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                        <img class="img-responsive" src="{{ asset('asset/client/img/770x860/01.jpg') }}"
+                        <img class="img-responsive" src="{{ asset('assets/client/img/770x860/01.jpg') }}"
                             alt="Team Image">
                     </div>
                 </div>
@@ -378,7 +378,7 @@ alt="Clients Logo">
             <div class="col-sm-4 sm-margin-b-50">
                 <div class="bg-color-white margin-b-20">
                     <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                        <img class="img-responsive" src="{{ asset('asset/client/img/770x860/02.jpg') }}"
+                        <img class="img-responsive" src="{{ asset('assets/client/img/770x860/02.jpg') }}"
                             alt="Team Image">
                     </div>
                 </div>
@@ -393,7 +393,7 @@ alt="Clients Logo">
             <div class="col-sm-4 sm-margin-b-50">
                 <div class="bg-color-white margin-b-20">
                     <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                        <img class="img-responsive" src="{{ asset('asset/client/img/770x860/03.jpg') }}"
+                        <img class="img-responsive" src="{{ asset('assets/client/img/770x860/03.jpg') }}"
                             alt="Team Image">
                     </div>
                 </div>
