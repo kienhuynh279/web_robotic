@@ -91,8 +91,7 @@
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
-                        <h3 class="color-white margin-b-5">Art Of Coding</h3>
-                        <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                        <h2 class="color-white margin-b-5">Hospital</h2>
                     </div>
                     <a class="content-wrapper-link" href="#"></a>
                 </div>
@@ -106,8 +105,7 @@
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
-                        <h3 class="color-white margin-b-5">Clean Design</h3>
-                        <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                        <h2 class="color-white margin-b-5">Hotel</h2>
                     </div>
                     <a class="content-wrapper-link" href="#"></a>
                 </div>
@@ -121,8 +119,7 @@
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
-                        <h3 class="color-white margin-b-5">Clean Design</h3>
-                        <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                        <h2 class="color-white margin-b-5">Factory</h2>
                     </div>
                     <a class="content-wrapper-link" href="#"></a>
                 </div>
@@ -136,8 +133,7 @@
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
-                        <h3 class="color-white margin-b-5">Clean Design</h3>
-                        <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                        <h2 class="color-white margin-b-5">Office</h2>
                     </div>
                     <a class="content-wrapper-link" href="#"></a>
                 </div>
@@ -151,8 +147,7 @@
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
-                        <h3 class="color-white margin-b-5">Clean Design</h3>
-                        <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                        <h2 class="color-white margin-b-5">Restaurant</h2>
                     </div>
                     <a class="content-wrapper-link" href="#"></a>
                 </div>
@@ -165,8 +160,7 @@
                         <img style="height: 400px" class="full-width img-responsive" src="{{ asset('assets/client/img/800x400/01.jpg') }}"/>
                     </div>
                     <div class="work-content">
-                        <h3 class="color-white margin-b-5">Clean Design</h3>
-                        <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                        <h2 class="color-white margin-b-5">Coffee house</h2>
                     </div>
                     <a class="content-wrapper-link" href="#"></a>
                 </div>

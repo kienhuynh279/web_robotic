@@ -26,7 +26,7 @@
                             <a class="nav-item-child {{ activeMenu('service') }}" href="{{ route('service') }}">Sevices</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('resoucre') }}" href="">Resouces</a>
+                            <a class="nav-item-child {{ activeMenu('resource') }}" href="{{ route('docs') }}">Resoucre</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-item-child {{ activeMenu('about') }}" href="{{ route('about') }}">About Us</a>
