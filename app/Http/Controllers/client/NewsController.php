@@ -11,4 +11,8 @@ class NewsController extends Controller
     public function index() {
         return view("client.pages.news.index");
     }
+
+    public function detail() {
+        return view("client.pages.news.detail");
+    }
 }

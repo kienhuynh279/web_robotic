@@ -20,19 +20,19 @@
                             <a class="nav-item-child {{ activeMenu('') }}" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('product') }}" href="#">Product</a>
+                            <a class="nav-item-child {{ activeMenu('product') }}" href="{{ route('product') }}">Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('services') }}" href="#">Sevices</a>
+                            <a class="nav-item-child {{ activeMenu('service') }}" href="{{ route('service') }}">Sevices</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('resoucres') }}" href="#">Resouces</a>
+                            <a class="nav-item-child {{ activeMenu('resoucre') }}" href="">Resouces</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('about-us') }}" href="#">About Us</a>
+                            <a class="nav-item-child {{ activeMenu('about') }}" href="{{ route('about') }}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('contact') }}" href="#">Contact</a>
+                            <a class="nav-item-child {{ activeMenu('contact') }}" href="{{ route('contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
