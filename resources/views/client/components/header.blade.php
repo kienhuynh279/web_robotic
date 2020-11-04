@@ -26,7 +26,12 @@
                             <a class="nav-item-child {{ activeMenu('service') }}" href="{{ route('service') }}">Sevices</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('resource') }}" href="{{ route('docs') }}">Resoucre</a>
+                            <a class="nav-item-child" data-toggle="dropdown" href="">Resoucre</a>
+                            <div class ="dropdown-menu">
+                                <a class="dropdown-item" href="{{ route('news') }}">News</a>
+                                <a class="dropdown-item" href="{{ route('gallery') }}">Gallery</a>
+                                <a class="dropdown-item" href="{{ route('docs') }}">Documents</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-item-child {{ activeMenu('about') }}" href="{{ route('about') }}">About Us</a>
@@ -41,11 +46,11 @@
     </nav>
 </header>
 <?php 
-            function activeMenu($uri = '') {
-                $active = '';
-                if (Request::segment(1) == $uri) {
-                    $active = 'active';
-                }
-                return $active;
-            }
-        ?>
+    function activeMenu($uri = '') {
+        $active = '';
+        if (Request::segment(1) == $uri) {
+            $active = 'active';
+        }
+        return $active;
+    }
+?>
