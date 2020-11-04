@@ -1,49 +1,42 @@
 <header class="header">
-    <nav class="navbar" role="navigation">
-        <div class="container flex-nowrap">
-            <div class="menu-container">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="toggle-icon"></span>
-                </button>
-                <div class="navbar-logo">
-                    <a class="navbar-logo-wrap" href="{{ route('home') }}">
-                        <img class="navbar-logo-img" src="{{ asset('assets/client/img/logo.png') }}" alt="Acidus Logo">
-                    </a>
-                </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="navbar-logo">
+                <a class="navbar-logo-wrap" href="{{ route('home') }}">
+                    <img class="navbar-logo-img" src="{{ asset('assets/client/img/logo.png') }}" alt="Acidus Logo">
+                </a>
             </div>
-            <!-- Menu -->
-            <div class="collapse navbar-collapse nav-collapse ml-auto text-right">
-                <div class="menu-container d-flex justify-content-end w-100">
-                    <ul class="navbar-nav navbar-nav-right d-flex flex-row float-none">
-                        <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('') }}" href="{{ route('home') }}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('product') }}" href="{{ route('product') }}">Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('service') }}" href="{{ route('service') }}">Sevices</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-item-child" data-toggle="dropdown" href="">Resoucre</a>
-                            <div class ="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('news') }}">News</a>
-                                <a class="dropdown-item" href="{{ route('gallery') }}">Gallery</a>
-                                <a class="dropdown-item" href="{{ route('docs') }}">Documents</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('about') }}" href="{{ route('about') }}">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-item-child {{ activeMenu('contact') }}" href="{{ route('contact') }}">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-item-child {{ activeMenu('') }}" href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-child {{ activeMenu('product') }}" href="{{ route('product') }}">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-child {{ activeMenu('service') }}" href="{{ route('service') }}">Sevices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-child" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resource</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item nav-item" href="{{ route('news') }}">News</a>
+                            <a class="dropdown-item nav-item" href="{{ route('gallery') }}">Gallery</a>
+                            <a class="dropdown-item nav-item" href="{{ route('docs') }}">Documents</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-child {{ activeMenu('about') }}" href="{{ route('about') }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-child {{ activeMenu('contact') }}" href="{{ route('contact') }}">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </header>
 <?php 
     function activeMenu($uri = '') {
