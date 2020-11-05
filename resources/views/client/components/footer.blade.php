@@ -43,7 +43,8 @@
     <div class="content container">
         <div class="row">
             <div class="col-xs-6">
-                <img class="footer-logo" src="{{ asset('assets/client/img/logo.png') }}" alt="Acidus Logo">
+                <a href="{{ route('home') }}"><h2>Logo</h2></a>
+                {{-- <img class="footer-logo" src="{{ asset('assets/client/img/logo.png') }}" alt="Acidus Logo"> --}}
             </div>
             <div class="col-xs-6 text-right">
                 <p class="margin-b-0"><a class="fweight-700" href="#">Copyright</a>

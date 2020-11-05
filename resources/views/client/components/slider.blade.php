@@ -8,61 +8,37 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
+                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/robotic/banner1.png")}}"
                     alt="">
             </a>
         </div>
         <div class="swiper-slide">
             <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
+                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/robotic/banner2.png")}}"
                     alt="">
             </a>
         </div>
         <div class="swiper-slide">
             <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
+                <img class="w-100 h-100 img-responsive" style="object-fit: cover" src="{{asset("assets/client/img/robotic/banner3.png")}}"
                     alt="">
             </a>
         </div>
         <div class="swiper-slide">
             <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
+                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/robotic/banner1.png")}}"
                     alt="">
             </a>
         </div>
         <div class="swiper-slide">
             <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
+                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/robotic/banner2.png")}}"
                     alt="">
             </a>
         </div>
         <div class="swiper-slide">
             <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
-                    alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
-                    alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
-                    alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
-                    alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#">
-                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
+                <img class="w-100 h-100" style="object-fit: cover" src="{{asset("assets/client/img/robotic/banner3.png")}}"
                     alt="">
             </a>
         </div>

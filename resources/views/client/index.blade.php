@@ -83,11 +83,11 @@
         <!-- Masonry Grid -->
         <div class="masonry-grid">
             <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
-            <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8">
+            <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/800x400/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/robotic/hopistal.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -97,11 +97,11 @@
                 </div>
                 <!-- End Work -->
             </div>
-            <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
+            <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x400/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/robotic/hotel.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -111,11 +111,11 @@
                 </div>
                 <!-- End Work -->
             </div>
-            <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
+            <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x300/01.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/robotic/factory.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -125,11 +125,11 @@
                 </div>
                 <!-- End Work -->
             </div>
-            <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
+            <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x300/02.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/robotic/office.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -139,11 +139,11 @@
                 </div>
                 <!-- End Work -->
             </div>
-            <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
+            <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x300/03.jpg') }}"
+                        <img class="full-width img-responsive" src="{{ asset('assets/client/img/robotic/restaurant.jpg') }}"
                             alt="Portfolio Image">
                     </div>
                     <div class="work-content">
@@ -153,11 +153,11 @@
                 </div>
                 <!-- End Work -->
             </div>
-            <div  class="masonry-grid-item col-xs-12 col-sm-12 col-md-12">
+            <div  class="masonry-grid-item col-xs-6 col-sm-6 col-md-6">
                 <!-- Work -->
                 <div class="work">
                     <div class="work-overlay">
-                        <img style="height: 400px" class="full-width img-responsive" src="{{ asset('assets/client/img/800x400/01.jpg') }}"/>
+                        <img style="height: 400px" class="full-width img-responsive" src="{{ asset('assets/client/img/robotic/coffee.jpg') }}"/>
                     </div>
                     <div class="work-content">
                         <h2 class="color-white margin-b-5">Coffee house</h2>
@@ -183,22 +183,10 @@
         </div>
 
         <div class="row">
-            <div style="margin: 0" class="col-sm-4">
-                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
-                    <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x300/03.jpg') }}"
-                                alt="Portfolio Image"> 
-                </div>
-            </div>
-            <div style="margin: 0" class="col-sm-4">
-                <div class="wow fadeInDown" data-wow-duration=".3" data-wow-delay=".3s">
-                    <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x300/03.jpg') }}"
-                                alt="Portfolio Image">
-                </div>
-            </div>
-            <div style="margin: 0" class="col-sm-4">
+            <div style="margin: 0" class="col-sm-12">
                 <div class="wow fadeInRight" data-wow-duration=".3" data-wow-delay=".3s">
-                    <img class="full-width img-responsive" src="{{ asset('assets/client/img/397x300/03.jpg') }}"
-                                alt="Portfolio Image">
+                    <img class="full-width img-responsive" src="{{ asset('assets/client/img/robotic/bc1.png') }}"
+                                alt="Portfolio Image"> 
                 </div>
             </div>
         </div>

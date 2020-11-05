@@ -19,7 +19,7 @@ Trang tài liệu
    <div class="row">
         <div class="col-sm-4">
               <img class="w-100" height="700" style="object-fit: cover"
-                src="{{asset("assets/client/img/595x240/02.jpg")}}" alt="">
+                src="{{asset("assets/client/img/robotic/contact.png")}}" alt="">
         </div>
         <div class="col-sm-8">
             <div class="row">

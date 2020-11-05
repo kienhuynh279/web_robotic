@@ -3,7 +3,7 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100" height="500" src="{{asset("assets/client/img/595x240/02.jpg")}}" alt="The image">
+                <img class="w-100" height="500" src="{{asset("assets/client/img/robotic/imgbanner.png")}}" alt="The image">
             </div>
             <div class="carousel-item">
                 <img class="w-100" height="500" src="{{asset("assets/client/img/595x240/02.jpg")}}" alt="The image">

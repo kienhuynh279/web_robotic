@@ -17,11 +17,11 @@ Trang sản phẩm
             <h1 class="text-center">ARARBOT BASE</h1>
 
             <div class="row mx-0" style="margin-bottom: 50px">
-                <div class="col-md-6 pl-0">
+                <div class="col-md-4 pl-0">
                     <img class="w-100" height="400" style="object-fit: cover"
-                            src="{{asset("assets/client/img/595x240/02.jpg")}}" alt="">
+                            src="{{asset("assets/client/img/robotic/sp4.png")}}" alt="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <h4 class="mb-0">Specifications</h4>
 
                     <div class="block">
@@ -57,7 +57,7 @@ Trang sản phẩm
             <div class="row mx-0 mb-5" style="margin-bottom: 50px">
                 <div class="col-md-4 pl-0 order-2">
                     <img class="w-100" height="400" style="object-fit: cover"
-                            src="{{asset("assets/client/img/595x240/02.jpg")}}" alt="">
+                            src="{{asset("assets/client/img/robotic/sp4.png")}}" alt="">
                 </div>
                 <div class="col-md-8 order-1">
                     <div class="col-md-4">

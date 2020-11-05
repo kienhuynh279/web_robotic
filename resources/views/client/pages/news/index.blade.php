@@ -8,7 +8,7 @@ Trang tài liệu
 @include('client.components.banner')
 
 <div class="container px-0">
-    <h2 style="margin-top:20px" class="text-center">Documents</h2>
+    <h2 style="margin-top:20px" class="text-center">News</h2>
     <div class="row py-5">
         <div class="col-md-4 mb-5">
             <div class="card">

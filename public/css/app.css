@@ -3366,12 +3366,13 @@ input[type=button].btn-block {
 
 .dropdown-divider {
     height: 0;
-    margin: 0.5rem 0;
+    margin: 0.5rem 1rem;
     overflow: hidden;
     border-top: 1px solid #e9ecef;
 }
 
 .dropdown-item {
+    margin: 20px;
     display: block;
     width: 100%;
     padding: 0;
@@ -3394,7 +3395,7 @@ input[type=button].btn-block {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #007bff;
+    background-color: #d9d8d4;
 }
 
 .dropdown-item.disabled,
