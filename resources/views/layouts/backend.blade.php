@@ -123,6 +123,39 @@
             "",
             true
         ),
+
+        module(
+            "Quản trị ứng dụng",
+            'admin/accounts/*',
+            "#",
+            "fa fa-users",
+            [
+                module(
+                    "Danh sách ứng dụng",
+                    'admin/users/',
+                    route("admin.application.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm ứng dụng",
+                    'admin/accounts/users',
+                    route("admin.application.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
+            true
+        ),
     ];
 @endphp
 

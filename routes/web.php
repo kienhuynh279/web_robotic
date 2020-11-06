@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ApplicationController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\UsersController;
@@ -40,6 +41,10 @@ Route::group(["prefix" => "admin", "middleware" => ["auth"]], function () {
     ]);
 
     Route::resource("categories", CategoryController::class, [
+        "as" => "admin"
+    ]);
+
+    Route::resource("application", ApplicationController::class, [
         "as" => "admin"
     ]);
 
