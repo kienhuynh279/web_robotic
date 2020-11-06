@@ -19,7 +19,7 @@
 
     $modules = [
         module(
-            "Manage All",
+            "Tổng quan",
             'admin/dashboard/*',
             "admin.dashboard",
             "fa fa-edit",
@@ -28,102 +28,35 @@
             true
         ),
         module(
-            "Tài khoản",
+            "Quản trị tài khoản",
             'admin/accounts/*',
             "admin.accounts.roles.index",
-            "fa fa-user",
+            "fa fa-users",
             [
                 module(
-                    "Vai trò",
-                    'admin/accounts/roles',
-                    "admin.accounts.roles.index",
-                    "fa fa-podcast",
+                    "Danh sách tài khoản",
+                    'admin/users/',
+                    route("admin.users.index"),
+                    "fa fa-list",
                     [
-                        module(
-                            "Danh sách",
-                            "admin/accounts/roles",
-                            "admin.accounts.roles.index",
-                            "fa fa-list"
-                        ),
-                        module(
-                            "Thêm",
-                            "admin/accounts/roles/create",
-                            "admin.accounts.roles.create",
-                            "fa fa-plus"
-                        )
-                    ],
-                    null,
-                    true
-                ),
-
-                module(
-                    "Quyền",
-                    'admin/accounts/permissions',
-                    "admin.accounts.permissions.index",
-                    "fa fa-microchip",
-                    [
-                        module(
-                            "Danh sách",
-                            "admin/accounts/permissions",
-                            "admin.accounts.permissions.index",
-                            "fa fa-list"
-                        ),
-                        module(
-                            "Thêm",
-                            "admin/accounts/permissions/create",
-                            "admin.accounts.permissions.create",
-                            "fa fa-plus"
-                        )
-                    ],
-                    null,
-                    true
-                ),
-
-                module(
-                    "Nhóm quyền",
-                    "admin/accounts/permissions/group-permissions",
-                    "admin.accounts.permissions.group-permissions.index",
-                    "fa fa-object-group",
-                    [],
-                    null,
-                    false
-                ),
-                
-                module(
-                    "Người dùng",
-                    'admin/accounts/users',
-                    "admin.accounts.users.index",
-                    "fa fa-user",
-                    [
-                        module(
-                            "Danh sách & Phân quyền",
-                            "admin/accounts/users",
-                            "admin.accounts.users.index",
-                            "fa fa-list"
-                        ),
-                        module(
-                            "Thêm",
-                            "admin/accounts/users/create",
-                            "admin.accounts.users.create",
-                            "fa fa-plus"
-                        )
+                        
                     ] ,
                     null,
                     true
                 ),
-
                 module(
-                    "Demo 1.1",
-                    'admin/dashboard/*',
-                    "auth.login",
+                    "Tạo thêm tài khoản",
+                    'admin/accounts/users',
+                    route("admin.users.create"),
                     "fa fa-edit",
                     [
-                        module("Demo 1.1.1", "admin/dashboard/*", "auth.login", "fa fa-cogs"),
-                        module("Demo 1.1.1", "admin/dashboard/*", "auth.login", "fa fa-cog"),
-                    ]
-                )
+                        
+                    ] ,
+                    null,
+                    true
+                ),
             ],
-            "Systems",
+            "Hệ thống",
             true
         ),
     ];
@@ -411,18 +344,6 @@
             <div class="js-sidebar-scroll">
                 <!-- Side Navigation -->
                 <div class="content-side content-side-full">
-                    <div class="content-side content-side-full bg-black-10 text-center" style="width: 100%!important;">
-                        <div class="smini-hide">
-                            <a class="img-link d-block mb-3" href="javascript:void(0)">
-                                <img class="img-avatar img-avatar-thumb" src="{{asset('media/avatars/avatar8.jpg')}}" alt="">
-                            </a>
-                            <a class="font-w600 text-dual" href="javascript:void(0)">
-                                @EmmaCraft
-                            </a>
-                            <span class="badge badge-pill badge-danger">Gamer</span>
-                        </div>
-                    </div>
-                    
                     <ul class="nav-main">
                         @foreach ($modules as $module)
                         @if ($module["section"] ?? false)

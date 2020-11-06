@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Client\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,13 +25,14 @@ Route::get('/about', 'App\Http\Controllers\Client\AboutController@index')->name(
 Route::get('/service', 'App\Http\Controllers\Client\ServiceController@index')->name('service');
 Route::get('/contact', 'App\Http\Controllers\Client\ContactController@index')->name('contact');
 
-// Route::get('/', 'app\Http\Controllers\client\HomeController@index');
+Route::get("/login", [AuthController::class, "login"],)->name("auth.login")->middleware("guest");
+Route::post("/login", [AuthController::class, "handle_login"])->name("auth.handle_login")->middleware("guest");
 
-// Route::get('/', function () {
-//     return view('views.client.page.index');
-// });
-
-Route::group(["prefix" => "admin", "middleware" => []], function() {
+Route::group(["prefix" => "admin", "middleware" => ["auth"]], function() {
+    Route::resource("users", UsersController::class, [
+        "as" => "admin"
+    ]);
+    
     Route::get("/dashboard", function() {
         return view("admin.dashboard");
     });
