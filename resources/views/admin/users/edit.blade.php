@@ -5,10 +5,10 @@ Chỉnh sửa tài khoản
 @endsection
 
 @section('content')
-<form action="{{route("admin.users.store")}}" method="post">
+<form action="{{route("admin.users.update", $user->UserId)}}" method="post">
     @csrf
-   @include("admin.users.inc._form-control")
-</form>
+    @method("PUT")
+   @include("admin.users.inc._form-control")</form>
 @endsection
 
 @section('js_after')

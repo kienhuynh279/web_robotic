@@ -61,7 +61,9 @@ class UsersController extends Controller
     {
         $request->validated();
 
-        // return $request->all();
+        $request->validate([
+            "Password" => "required|min:8"
+        ]);
 
         $user = User::create([
             "Name" => $request->get("Name"),
@@ -109,9 +111,31 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserRequest $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $request->validated();
+
+        // check change password and password confirm
+        if ($request->input("Password") !== null || $request->input("Password_confirm") !== null) {
+            $request->validate([
+                "Password" => "required|min:8",
+                "Password_confirm" => "required|min:8|same:Password",
+            ]);
+
+            $user->Password = Hash::make($request->input("Password"));
+        }
+
+        $user->Name = $request->get("Name");
+        $user->Gender = intval($request->get("Gender"));
+        $user->Birthday = $request->get("Birthday");
+        $user->Image = $request->get("Image");
+        $user->save();
+
+        return redirect()->route("admin.users.index")->withErrors([
+            "success" => "Cập nhật tài khoản thành công",
+        ]);
     }
 
     /**
