@@ -30,7 +30,7 @@
         module(
             "Quản trị tài khoản",
             'admin/accounts/*',
-            "admin.accounts.roles.index",
+            "#",
             "fa fa-users",
             [
                 module(
@@ -57,6 +57,38 @@
                 ),
             ],
             "Hệ thống",
+            true
+        ),
+        module(
+            "Quản trị tin tức",
+            'admin/accounts/*',
+            "#",
+            "fa fa-users",
+            [
+                module(
+                    "Danh sách tin tức",
+                    'admin/users/',
+                    route("admin.news.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm tin tức",
+                    'admin/accounts/users',
+                    route("admin.users.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
             true
         ),
     ];

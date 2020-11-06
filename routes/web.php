@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Client\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,10 @@ Route::post("/login", [AuthController::class, "handle_login"])->name("auth.handl
 
 Route::group(["prefix" => "admin", "middleware" => ["auth"]], function() {
     Route::resource("users", UsersController::class, [
+        "as" => "admin"
+    ]);
+
+    Route::resource("news", NewsController::class, [
         "as" => "admin"
     ]);
     
