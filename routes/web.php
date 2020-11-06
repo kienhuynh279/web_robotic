@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Client\AuthController;
@@ -29,7 +30,7 @@ Route::get('/contact', 'App\Http\Controllers\Client\ContactController@index')->n
 Route::get("/login", [AuthController::class, "login"],)->name("auth.login")->middleware("guest");
 Route::post("/login", [AuthController::class, "handle_login"])->name("auth.handle_login")->middleware("guest");
 
-Route::group(["prefix" => "admin", "middleware" => ["auth"]], function() {
+Route::group(["prefix" => "admin", "middleware" => ["auth"]], function () {
     Route::resource("users", UsersController::class, [
         "as" => "admin"
     ]);
@@ -37,8 +38,12 @@ Route::group(["prefix" => "admin", "middleware" => ["auth"]], function() {
     Route::resource("news", NewsController::class, [
         "as" => "admin"
     ]);
-    
-    Route::get("/dashboard", function() {
+
+    Route::resource("categories", CategoryController::class, [
+        "as" => "admin"
+    ]);
+
+    Route::get("/dashboard", function () {
         return view("admin.dashboard");
     });
 });

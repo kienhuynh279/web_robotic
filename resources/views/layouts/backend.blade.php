@@ -79,7 +79,39 @@
                 module(
                     "Tạo thêm tin tức",
                     'admin/accounts/users',
-                    route("admin.users.create"),
+                    route("admin.news.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
+            true
+        ),
+        module(
+            "Quản trị thể loại",
+            'admin/accounts/*',
+            "#",
+            "fa fa-users",
+            [
+                module(
+                    "Danh sách thể loại",
+                    'admin/users/',
+                    route("admin.categories.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm thể thoại",
+                    'admin/accounts/users',
+                    route("admin.categories.create"),
                     "fa fa-edit",
                     [
                         
