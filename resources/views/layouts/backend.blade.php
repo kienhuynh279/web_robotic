@@ -29,8 +29,8 @@
         ),
         module(
             "Quản trị tài khoản",
-            'admin/accounts/*',
-            "admin.accounts.roles.index",
+            'admin/users',
+            "#",
             "fa fa-users",
             [
                 module(
@@ -57,6 +57,103 @@
                 ),
             ],
             "Hệ thống",
+            true
+        ),
+        module(
+            "Quản trị tin tức",
+            'admin/news',
+            "#",
+            "fa fa-book",
+            [
+                module(
+                    "Danh sách tin tức",
+                    'admin/users/',
+                    route("admin.news.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm tin tức",
+                    'admin/accounts/users',
+                    route("admin.news.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
+            true
+        ),
+        module(
+            "Quản trị thể loại",
+            'admin/categories',
+            "#",
+            "fa fa-bookmark",
+            [
+                module(
+                    "Danh sách thể loại",
+                    'admin/users/',
+                    route("admin.categories.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm thể thoại",
+                    'admin/accounts/users',
+                    route("admin.categories.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
+            true
+        ),
+
+        module(
+            "Quản trị ứng dụng",
+            'admin/application',
+            "#",
+            "fa fa-info-circle",
+            [
+                module(
+                    "Danh sách ứng dụng",
+                    'admin/users/',
+                    route("admin.application.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm ứng dụng",
+                    'admin/accounts/users',
+                    route("admin.application.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
             true
         ),
     ];
@@ -86,6 +183,7 @@
 
     <!-- Fonts and Styles -->
     @yield('css_before')
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" id="css-main" href="{{ mix('css/dashmix.css') }}">
 
@@ -655,11 +753,11 @@
                                 <div role="separator" class="dropdown-divider"></div>
                                 
                                 <!-- Logout -->
-                                <form id="logout-js" action="{{""}}" method="POST"> {{-- route("auth.handle_logout") --}}
+                                <form id="logout-js" action="{{route("auth.handle_logout")}}" method="POST"> {{-- route("auth.handle_logout") --}}
                                     @csrf
                                 </form>
                                 <a onclick="document.querySelector('#logout-js').submit()" class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
-                                    Sign Out
+                                    Đăng xuất
                                     <i class="fa fa-fw fa-sign-out-alt text-danger ml-1"></i>
                                 </a>
                                 <!-- End Logout -->

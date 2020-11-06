@@ -39,4 +39,13 @@ class AuthController extends Controller
                 ]);
         }
     }
+
+    public function handle_logout()
+    {
+        Auth::logout();
+
+        return redirect()->route("auth.login")->withErrors([
+            "success" => "Đăng xuất thành công"
+        ]);
+    }
 }

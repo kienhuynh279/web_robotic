@@ -87,6 +87,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
+        return abort(404);
     }
 
     /**

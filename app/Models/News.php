@@ -16,7 +16,8 @@ class News extends Model
          'Title',
          'Description',
          'Image',
-         'Create_at',
+         'created_at',
+         "updated_at",
          'Status'
     ];
 
