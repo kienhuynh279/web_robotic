@@ -8,11 +8,11 @@
 
     function module($name = "", $req = "", $href = "", $icon = "fa fa-cog", $children = [], $section = null, $isParent = false) {
         return [
-            "name" => $name,
+            "name" => $name, // name module
             "request" => request()->is($req) || request()->is($req."/*") ? $isParent ? ' open' : ' active' : '',
-            "href" => $href,
-            "icon" => $icon,
-            "children" => $children,
+            "href" => $href, // Write Route(web.php) here
+            "icon" => $icon, // fontawesome
+            "children" => $children, // children module
             "section" => $section // auto null if not add value for this param
         ];
     }
