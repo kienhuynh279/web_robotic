@@ -21,7 +21,7 @@
         module(
             "Tổng quan",
             'admin/dashboard/*',
-            "admin.dashboard",
+            "dashboard",
             "fa fa-edit",
             [],
             "Dashboard",
@@ -145,6 +145,171 @@
                     "Tạo thêm ứng dụng",
                     'admin/accounts/users',
                     route("admin.application.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
+            true
+        ),
+
+        module(
+            "Quản trị hình ảnh",
+            'admin/docs',
+            "#",
+            "fa fa-image",
+            [
+                module(
+                    "Danh sách hình ảnh",
+                    'admin/image/',
+                    route("admin.image.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm tin tức",
+                    'admin/image/create',
+                    route("admin.image.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
+            true
+        ),
+        
+        module(
+            "Quản trị sản phẩm",
+            'admin/product',
+            "#",
+            "fa fa-cube",
+            [
+                module(
+                    "Danh sách sản phẩm",
+                    'admin/product/',
+                    route("admin.product.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm tin tức",
+                    'admin/product/create',
+                    route("admin.product.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
+            true
+        ),
+
+        module(
+            "Quản trị dịch vụ",
+            'admin/service',
+            "#",
+            "fa fa-check",
+            [
+                module(
+                    "Danh sách dịch vụ",
+                    'admin/service/',
+                    route("admin.service.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm dịch vụ",
+                    'admin/service/create',
+                    route("admin.service.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "", 
+            true
+        ),
+
+        module(
+            "Quản trị tin tức",
+            'admin/docs',
+            "#",
+            "fa fa-newspaper",
+            [
+                module(
+                    "Danh sách tin tức",
+                    'admin/docs/',
+                    route("admin.docs.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm tin tức",
+                    'admin/docs/create',
+                    route("admin.docs.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
+            true
+        ),
+
+        module(
+            "Quản trị loại dịch vụ",
+            'admin/type',
+            "#",
+            "fa fa-bookmark",
+            [
+                module(
+                    "Danh sách loại dịch vụ",
+                    'admin/type/',
+                    route("admin.type.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm loại dịch vụ",
+                    'admin/type/create',
+                    route("admin.type.create"),
                     "fa fa-edit",
                     [
                         

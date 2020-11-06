@@ -5,6 +5,11 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Client\AuthController;
+use App\Http\Controllers\Admin\DocsController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ImageController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,6 +51,26 @@ Route::group(["prefix" => "admin", "middleware" => ["auth"]], function () {
     ]);
 
     Route::resource("application", ApplicationController::class, [
+        "as" => "admin"
+    ]);
+
+    Route::resource("type", TypeController::class, [
+        "as" => "admin"
+    ]);
+
+    Route::resource('product', ProductController::class, [
+        "as" => "admin"
+    ]);
+
+    Route::resource('docs', DocsController::class, [
+        "as" => "admin"
+    ]);
+
+    Route::resource('image', ImageController::class, [
+        "as" => "admin"
+    ]);
+
+    Route::resource('service', ServiceController::class, [
         "as" => "admin"
     ]);
 
