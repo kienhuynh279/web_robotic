@@ -28,3 +28,9 @@ Route::get('/contact', 'App\Http\Controllers\Client\ContactController@index')->n
 // Route::get('/', function () {
 //     return view('views.client.page.index');
 // });
+
+Route::group(["prefix" => "admin", "middleware" => []], function() {
+    Route::get("/dashboard", function() {
+        return view("admin.dashboard");
+    });
+});

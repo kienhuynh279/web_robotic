@@ -37328,15 +37328,123 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/dashmix/themes/xdream.scss":
+/*!***************************************************!*\
+  !*** ./resources/sass/dashmix/themes/xdream.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/dashmix/themes/xeco.scss":
+/*!*************************************************!*\
+  !*** ./resources/sass/dashmix/themes/xeco.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/dashmix/themes/xinspire.scss":
+/*!*****************************************************!*\
+  !*** ./resources/sass/dashmix/themes/xinspire.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/dashmix/themes/xmodern.scss":
+/*!****************************************************!*\
+  !*** ./resources/sass/dashmix/themes/xmodern.scss ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/dashmix/themes/xplay.scss":
+/*!**************************************************!*\
+  !*** ./resources/sass/dashmix/themes/xplay.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/dashmix/themes/xpro.scss":
+/*!*************************************************!*\
+  !*** ./resources/sass/dashmix/themes/xpro.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/dashmix/themes/xsmooth.scss":
+/*!****************************************************!*\
+  !*** ./resources/sass/dashmix/themes/xsmooth.scss ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/dashmix/themes/xwork.scss":
+/*!**************************************************!*\
+  !*** ./resources/sass/dashmix/themes/xwork.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/main.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/main.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/main.scss ./resources/sass/dashmix/themes/xeco.scss ./resources/sass/dashmix/themes/xinspire.scss ./resources/sass/dashmix/themes/xmodern.scss ./resources/sass/dashmix/themes/xsmooth.scss ./resources/sass/dashmix/themes/xwork.scss ./resources/sass/dashmix/themes/xdream.scss ./resources/sass/dashmix/themes/xpro.scss ./resources/sass/dashmix/themes/xplay.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! F:\laravel\web_robotic\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! F:\laravel\web_robotic\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! F:\laravel\web_robotic\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! F:\laravel\web_robotic\resources\sass\main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! F:\laravel\web_robotic\resources\sass\dashmix\themes\xeco.scss */"./resources/sass/dashmix/themes/xeco.scss");
+__webpack_require__(/*! F:\laravel\web_robotic\resources\sass\dashmix\themes\xinspire.scss */"./resources/sass/dashmix/themes/xinspire.scss");
+__webpack_require__(/*! F:\laravel\web_robotic\resources\sass\dashmix\themes\xmodern.scss */"./resources/sass/dashmix/themes/xmodern.scss");
+__webpack_require__(/*! F:\laravel\web_robotic\resources\sass\dashmix\themes\xsmooth.scss */"./resources/sass/dashmix/themes/xsmooth.scss");
+__webpack_require__(/*! F:\laravel\web_robotic\resources\sass\dashmix\themes\xwork.scss */"./resources/sass/dashmix/themes/xwork.scss");
+__webpack_require__(/*! F:\laravel\web_robotic\resources\sass\dashmix\themes\xdream.scss */"./resources/sass/dashmix/themes/xdream.scss");
+__webpack_require__(/*! F:\laravel\web_robotic\resources\sass\dashmix\themes\xpro.scss */"./resources/sass/dashmix/themes/xpro.scss");
+module.exports = __webpack_require__(/*! F:\laravel\web_robotic\resources\sass\dashmix\themes\xplay.scss */"./resources/sass/dashmix/themes/xplay.scss");
 
 
 /***/ })

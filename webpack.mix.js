@@ -16,4 +16,34 @@ mix.js("resources/js/app.js", "public/js")
     // .postCss('resources/css/app.css', 'public/css', [
     //     //
     // ])
-    .sass("resources/sass/app.scss", "public/css");
+    .sass("resources/sass/app.scss", "public/css")
+
+    /* CSS */
+    .sass('resources/sass/main.scss', 'public/css/dashmix.css')
+    .sass('resources/sass/dashmix/themes/xeco.scss', 'public/css/themes/')
+    .sass('resources/sass/dashmix/themes/xinspire.scss', 'public/css/themes/')
+    .sass('resources/sass/dashmix/themes/xmodern.scss', 'public/css/themes/')
+    .sass('resources/sass/dashmix/themes/xsmooth.scss', 'public/css/themes/')
+    .sass('resources/sass/dashmix/themes/xwork.scss', 'public/css/themes/')
+    .sass('resources/sass/dashmix/themes/xdream.scss', 'public/css/themes/')
+    .sass('resources/sass/dashmix/themes/xpro.scss', 'public/css/themes/')
+    .sass('resources/sass/dashmix/themes/xplay.scss', 'public/css/themes/')
+
+    /* JS */
+    .js('resources/js/app.js', 'public/js/laravel.app.js')
+    .js('resources/js/dashmix/app.js', 'public/js/dashmix.app.js')
+
+    /* Script */
+    .scripts([
+        'resources/js/functions/ckeditor.config.js',
+        'resources/js/functions/helpers.js',
+    ], 'public/js/functions/main.js')
+
+    /* Tools */
+    // .browserSync('localhost:8000')
+    .disableNotifications()
+
+    /* Options */
+    .options({
+        processCssUrls: false
+    });
