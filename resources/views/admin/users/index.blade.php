@@ -7,18 +7,18 @@ Trang quản lý người dùng
 @section('content')
 <div class="content">
     <div class="row row-deck">
-        {{-- <div class="col-6 col-lg-3">
-            <a class="block block-rounded block-link-shadow text-center" href="{{route("admin.accounts.roles.create")}}">
+        <div class="col-6 col-lg-3">
+            <a class="block block-rounded block-link-shadow text-center" href="{{route("admin.users.create")}}">
                 <div class="block-content py-5">
                     <div class="font-size-h3 font-w600 text-success mb-1">
                         <i class="fa fa-plus"></i>
                     </div>
                     <p class="font-w600 font-size-sm text-success text-uppercase mb-0">
-                        Thêm
+                        Thêm tài khoản
                     </p>
                 </div>
             </a>
-        </div> --}}
+        </div>
     </div>
     <div class="block block-rounded">
         <div class="block-header block-header-default">
@@ -93,7 +93,18 @@ Trang quản lý người dùng
                             </td>
 
                             <td class="d-none d-sm-table-cell text-center font-size-sm">{{$user->Email}}</td>
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">{{isset($user->Gender) && $user->Gender === 0 ? "Nam" : "Nữ"}}</td>
+                            <td class="d-none d-sm-table-cell text-center font-size-sm">
+                                @if (isset($user->Gender))
+                                    @if (intval($user->Gender) === 0)
+                                        Nam
+                                    @else
+                                        Nữ
+                                    @endif
+
+                                @else 
+                                    Không rõ
+                                @endif
+                            </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 <span class="badge badge-pill badge-primary">{{isset($user->Status) && $user->Status === 1 ? "Kích hoạt" : "Vô hiệu hóa"}}</span>
                             </td>

@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Tranh tạo tài khoản
+Trang tạo tài khoản
 @endsection
 
 @section('content')

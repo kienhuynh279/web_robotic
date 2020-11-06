@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -59,6 +60,21 @@ class UsersController extends Controller
     public function store(UserRequest $request)
     {
         $request->validated();
+
+        // return $request->all();
+
+        $user = User::create([
+            "Name" => $request->get("Name"),
+            "Email" => $request->get("Email"),
+            "Birthday" => $request->get("Birthday"),
+            "Password" => Hash::make($request->get("Password")),
+            "Gender" => intval($request->get("Gender"))
+        ]);
+
+        return redirect()->route("admin.users.index")->withErrors([
+            "success" => "Cấp tài khoản thành công",
+            "user" => $user
+        ]);
     }
 
     /**
@@ -69,7 +85,6 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**
@@ -80,7 +95,11 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return view("admin.users.edit")->with([
+            "user" => $user
+        ]);
     }
 
     /**

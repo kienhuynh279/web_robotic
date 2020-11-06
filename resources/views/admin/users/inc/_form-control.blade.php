@@ -27,32 +27,49 @@
 
     @slot('slot')
     <div class="form-row">
-        <x-input-form type="text" label="Họ và tên" name="Name" classGroup="col-md" class="" placeholder="Họ"
+        <x-input-form type="text" label="Họ và tên" name="Name" classGroup="col-md" class="" placeholder="Họ và tên"
             :value="$user->Name ?? ''" />
     </div>
 
     @if (Route::currentRouteName() === "admin.users.create")
-        <x-input-form type="text" label="Tên tài khoản Email(*)" name="Email" class="" aria-disabled="true"
+        <x-input-form type="email" label="Tên tài khoản Email(*)" name="Email" class="" aria-disabled="true"
         placeholder="Tên tài khoản email" :value="$user->Email ?? ''"  />
     @else
-        <x-input-form type="text" label="Tên tài khoản Email(*)" name="Email" class="" aria-disabled="true"
+        <x-input-form type="email" label="Tên tài khoản Email(*)" name="Email" class="" aria-disabled="true"
             placeholder="Tên tài khoản email" :value="$user->Email ?? ''" readonly />
     @endif
 
     <x-input-form type="date" label="Ngày sinh" name="Birthday" class="" placeholder="Ngày sinh"
-        :value="$user->email ?? ''" />
+        :value="$user->Birthday ?? ''" />
 
-    <div class="block-header block-header-default bg-secondary text-light p-0 mt-3">
-        <a class="font-w600 d-block w-100 p-3">Thay đổi mật khẩu</a>
-    </div>
-    <div class="bg-light">
-        <div class="block-content block-content-full">
-            <x-input-form type="password" label="Mật khẩu" name="password" class="" placeholder="Mật khẩu" value="" />
-
-            <x-input-form type="password" label="Xác nhận mật khẩu" name="password_confirm" class=""
-                placeholder="Xác nhận mật khẩu" value="" />
+    <div class="form-group">
+        <label class="d-block">Giới tính</label>
+        <div class="custom-control custom-radio custom-control-inline custom-control-primary">
+            <input type="radio" class="custom-control-input" id="nam" name="Gender" value="0" checked>
+            <label class="custom-control-label" for="nam">Nam</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline custom-control-primary">
+            <input type="radio" class="custom-control-input" id="nu" name="Gender" value="1">
+            <label class="custom-control-label" for="nu">Nữ</label>
         </div>
     </div>
+
+    @if (Route::currentRouteName() === "admin.users.edit")
+        <div class="block-header block-header-default bg-secondary text-light p-0 mt-3">
+            <a class="font-w600 d-block w-100 p-3">Thay đổi mật khẩu</a>
+        </div>
+        <div class="bg-light">
+            <div class="block-content block-content-full">
+                <x-input-form type="password" label="Mật khẩu" name="Password" class="" placeholder="Mật khẩu" value="" />
+
+            <x-input-form type="password" label="Xác nhận mật khẩu" name="Password_confirm" class=""
+                    placeholder="Xác nhận mật khẩu" value="" />
+            </div>
+        </div>
+    @else
+    <x-input-form type="password" label="Mật khẩu" name="Password" class="" placeholder="Mật khẩu"
+        :value="$user->Password ?? ''" />
+    @endif
 
     @endslot
 
