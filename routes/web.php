@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Admin\ApplicationController;
 use App\Http\Controllers\Client\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,7 +33,7 @@ Route::group(["prefix" => "admin", "middleware" => ["auth"]], function() {
     Route::resource("users", UsersController::class, [
         "as" => "admin"
     ]);
-    
+
     Route::get("/dashboard", function() {
         return view("admin.dashboard");
     });
