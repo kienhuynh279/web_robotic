@@ -29,7 +29,7 @@
         ),
         module(
             "Quản trị tài khoản",
-            'admin/accounts/*',
+            'admin/users',
             "#",
             "fa fa-users",
             [
@@ -61,9 +61,9 @@
         ),
         module(
             "Quản trị tin tức",
-            'admin/accounts/*',
+            'admin/news',
             "#",
-            "fa fa-users",
+            "fa fa-book",
             [
                 module(
                     "Danh sách tin tức",
@@ -93,9 +93,9 @@
         ),
         module(
             "Quản trị thể loại",
-            'admin/accounts/*',
+            'admin/categories',
             "#",
-            "fa fa-users",
+            "fa fa-bookmark",
             [
                 module(
                     "Danh sách thể loại",
@@ -126,9 +126,9 @@
 
         module(
             "Quản trị ứng dụng",
-            'admin/accounts/*',
+            'admin/application',
             "#",
-            "fa fa-users",
+            "fa fa-info-circle",
             [
                 module(
                     "Danh sách ứng dụng",
