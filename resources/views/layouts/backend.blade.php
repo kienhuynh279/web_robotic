@@ -753,11 +753,11 @@
                                 <div role="separator" class="dropdown-divider"></div>
                                 
                                 <!-- Logout -->
-                                <form id="logout-js" action="{{""}}" method="POST"> {{-- route("auth.handle_logout") --}}
+                                <form id="logout-js" action="{{route("auth.handle_logout")}}" method="POST"> {{-- route("auth.handle_logout") --}}
                                     @csrf
                                 </form>
                                 <a onclick="document.querySelector('#logout-js').submit()" class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
-                                    Sign Out
+                                    Đăng xuất
                                     <i class="fa fa-fw fa-sign-out-alt text-danger ml-1"></i>
                                 </a>
                                 <!-- End Logout -->
