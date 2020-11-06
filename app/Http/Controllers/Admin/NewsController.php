@@ -15,9 +15,17 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $news = News::paginate(20);
+        $filter = [];
+
+        if($request->has("q")) {
+            array_push($filter, [
+                "Title", "like", "%".$request->get("q")."%"
+            ]);
+        }
+
+        $news = News::where($filter)->paginate(20);
 
         return view("admin.news.index")->with([
             "news" => $news

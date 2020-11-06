@@ -55,11 +55,7 @@ Trang quản lý tin tức
             <form action="{{route("admin.news.index")}}" method="GET" class="row">
                 <div class="form-group col-md">
                     <input type="text" class="form-control form-control-alt" id="dm-ecom-products-search"
-                        name="qname" placeholder="Tìm kiếm với tên.." value="{{request()->query("qname")}}">
-                </div>
-                <div class="form-group col-md">
-                    <input type="text" class="form-control form-control-alt" id="dm-ecom-products-search"
-                        name="qemail" placeholder="Tìm kiếm với tài khoản" value="{{request()->query("qemail")}}">
+                        name="q" placeholder="Tìm kiếm với tên bài viết" value="{{request()->query("q")}}">
                 </div>
                 <div class="form-group col-md">
                     <button class="btn btn-primary" type="submit">Tìm kiếm</button>
@@ -133,9 +129,10 @@ Trang quản lý tin tức
                     </tbody>
                 </table>
             </div>
-            <nav aria-label="Photos Search Navigation">
+            
+            <div class="mb-3">
                 {{$news->appends(request()->query())->links()}}
-            </nav>
+            </div>
         </div>
     </div>
 </div>

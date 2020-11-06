@@ -138,9 +138,9 @@ Trang quản lý người dùng
                     </tbody>
                 </table>
             </div>
-            <nav aria-label="Photos Search Navigation">
+            <div class="mb-3">
                 {{$users->appends(request()->query())->links()}}
-            </nav>
+            </div>
         </div>
     </div>
 </div>
