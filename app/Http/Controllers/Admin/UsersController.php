@@ -146,6 +146,10 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::findOrFail($id)->delete();
+    
+        return redirect()->route("admin.users.index")->withErrors([
+            "success" => "Xóa tài khoản thành công",
+        ]);
     }
 }

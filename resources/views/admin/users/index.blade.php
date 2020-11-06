@@ -84,7 +84,7 @@ Trang quản lý người dùng
                         <tr>
                             <td class="d-none d-md-table-cell text-center font-size-sm">
                                 @if (isset($user->Image))
-                                    <img style="width: 60px; height: 60px; object-fit:cover" class="rounded-circle" src="{{$user->Image}}">
+                                    <img id="avt-{{$user->UserId}}" onerror='document.querySelector("#avt-{{$user->UserId}}").src= "/media/avatars/avatar1.jpg"' style="width: 60px; height: 60px; object-fit:cover" class="rounded-circle" src="{{$user->Image}}">
                                 @endif
                             </td>
 
