@@ -16,7 +16,15 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = Category::paginate(20);
+        $filter = [];
+
+        if($request->has("q")) {
+            array_push($filter, [
+                "Title", "like", "%".$request->get("q")."%"
+            ]);
+        }
+
+        $categories = Category::where($filter)->paginate(20);
 
         return view("admin.categories.index")->with([
             "categories" => $categories

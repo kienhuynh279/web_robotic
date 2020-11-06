@@ -16,7 +16,15 @@ class ApplicationController extends Controller
      */
     public function index(Request $request)
     {
-        $applications = Application::paginate(20);
+        $filter = [];
+
+        if($request->has("q")) {
+            array_push($filter, [
+                "Title", "like", "%".$request->get("q")."%"
+            ]);
+        }
+
+        $applications = Application::where($filter)->paginate(20);
 
         return view("admin.application.index")->with([
             "applications" => $applications

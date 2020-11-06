@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Trang quản lý tin tức
+Trang quản lý thể loại
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@ Trang quản lý tin tức
                         <i class="fa fa-plus"></i>
                     </div>
                     <p class="font-w600 font-size-sm text-success text-uppercase mb-0">
-                        Thêm bài viết mới
+                        Thêm thể loại
                     </p>
                 </div>
             </a>

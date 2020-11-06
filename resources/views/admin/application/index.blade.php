@@ -55,7 +55,7 @@ Trang quản lý tin tức
             <form action="{{route("admin.application.index")}}" method="GET" class="row">
                 <div class="form-group col-md">
                     <input type="text" class="form-control form-control-alt" id="dm-ecom-products-search"
-                        name="q" placeholder="Tìm kiếm với tên bài viết" value="{{request()->query("q")}}">
+                        name="q" placeholder="Tìm kiếm với tên ứng dụng" value="{{request()->query("q")}}">
                 </div>
                 <div class="form-group col-md">
                     <button class="btn btn-primary" type="submit">Tìm kiếm</button>
