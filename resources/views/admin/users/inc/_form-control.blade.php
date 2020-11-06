@@ -45,11 +45,11 @@
     <div class="form-group">
         <label class="d-block">Giới tính</label>
         <div class="custom-control custom-radio custom-control-inline custom-control-primary">
-            <input type="radio" class="custom-control-input" id="nam" name="Gender" value="0" @if(intval(old("Gender")) === 0) checked @elseif($user && intval($user->Gender) === 0) checked @endif>
+            <input type="radio" class="custom-control-input" id="nam" name="Gender" value="0" @if(intval(old("Gender")) === 0) checked @elseif($user ?? false && intval($user->Gender) === 0) checked @endif>
             <label class="custom-control-label" for="nam">Nam</label>
         </div>
         <div class="custom-control custom-radio custom-control-inline custom-control-primary">
-            <input type="radio" class="custom-control-input" id="nu" name="Gender" value="1" @if(intval(old("Gender")) === 1) checked @elseif($user && intval($user->Gender) === 1) checked @endif>
+            <input type="radio" class="custom-control-input" id="nu" name="Gender" value="1" @if(intval(old("Gender")) === 1) checked @elseif($user ?? false && intval($user->Gender) === 1) checked @endif>
             <label class="custom-control-label" for="nu">Nữ</label>
         </div>
     </div>
