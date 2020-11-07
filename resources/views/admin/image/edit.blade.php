@@ -1,14 +1,14 @@
 @extends('layouts.backend')
 
 @section('title')
-Chỉnh sửa tài khoản
+Chỉnh sửa ảnh
 @endsection
 
 @section('content')
-<form action="{{route("admin.application.update", $application->ApplicationId)}}" method="post">
+<form action="{{route("admin.image.update", $image->ImageId)}}" method="post">
     @csrf
     @method("PUT")
-   @include("admin.application.inc._form-control")</form>
+   @include("admin.image.inc._form-control")</form>
 @endsection
 
 @section('js_after')

@@ -5,9 +5,9 @@ Trang tạo tài khoản
 @endsection
 
 @section('content')
-<form action="{{route("admin.application.store")}}" method="post">
+<form action="{{route("admin.image.store")}}" method="post">
     @csrf
-   @include("admin.application.inc._form-control")
+   @include("admin.image.inc._form-control")
 </form>
 @endsection
 

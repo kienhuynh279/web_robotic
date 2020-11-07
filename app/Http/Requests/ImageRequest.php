@@ -24,8 +24,8 @@ class ImageRequest extends FormRequest
     public function rules()
     {
         return [
-            "Title" => "required",
-            "Description" => "required",
+            "Src" => "required",
+            "Alt" => "required",
         ];
     }
 }

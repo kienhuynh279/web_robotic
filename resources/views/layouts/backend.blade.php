@@ -257,13 +257,13 @@
         ),
 
         module(
-            "Quản trị tin tức",
+            "Quản trị tài liệu",
             'admin/docs',
             "#",
             "fa fa-newspaper",
             [
                 module(
-                    "Danh sách tin tức",
+                    "Danh sách tài liệu",
                     'admin/docs/',
                     route("admin.docs.index"),
                     "fa fa-list",
@@ -274,7 +274,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm tin tức",
+                    "Tạo thêm tài liệu",
                     'admin/docs/create',
                     route("admin.docs.create"),
                     "fa fa-edit",

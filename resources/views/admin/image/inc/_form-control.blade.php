@@ -26,16 +26,12 @@
     @endslot
 
     @slot('slot')
-    <div class="form-row">
-        <x-input-form type="text" label="Tiêu đề" name="Title" classGroup="col-md" class="" placeholder="Tiêu đề"
-            :value="$application->Title ?? ''" />
-    </div>
-
+   
     <div class="form-group">
-        <label for="">Ảnh đại diện</label>
+        <label for="">Ảnh</label>
         <div class="input-group">
-            <input type="text" class="form-control @error("Image") is-invalid @enderror" id="Image" name="Image"
-                placeholder="Hình ảnh" value="{{!old("Image") ? $application->Image ?? false ? $application->Image : old("Image") : old("Image") }}">
+            <input type="text" class="form-control @error("Image") is-invalid @enderror" id="Image" name="Src"
+                placeholder="Hình ảnh" value="{{!old("Src") ? $image->Src ?? false ? $image->Src : old("Src") : old("Src") }}">
             <div class="input-group-append">
                 <button type="button" class="btn btn-dark" onclick="selectFileCKFinder('Image')">Chọn ảnh</button>
             </div>
@@ -46,11 +42,10 @@
         @enderror
     </div>
 
-    <div class="form-group">
-        <label for="editor" class="@error("Description") text-danger @enderror">Miêu tả</label>
-        <textarea id="editor" class="form-control" name="Description" rows="3">{{!old("Description") ? $application->Description ?? false ? $application->Description : old("Description") : old("Description") }}</textarea>
+     <div class="form-row">
+        <x-input-form type="text" label="Chú thích" name="Alt" classGroup="col-md" class="" placeholder="Chú thích"
+            :value="$image->Alt ?? ''" />
     </div>
-
     @endslot
 
 </x-wp-layout>

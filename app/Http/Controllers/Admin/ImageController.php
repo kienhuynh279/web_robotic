@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ImageRequest;
 use App\Models\Image;
 use Illuminate\Http\Request;
 
@@ -13,9 +14,21 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $filter = [];
+
+        if($request->has("src")) {
+            array_push($filter, [
+                "Src", "like", "%".$request->get("src")."%"
+            ]);
+        }
+
+        $img = Image::where($filter)->paginate(20);
+
+        return view("admin.image.index")->with([
+            "image" => $img
+        ]);
     }
 
     /**
@@ -25,7 +38,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.image.create");
     }
 
     /**
@@ -34,9 +47,18 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ImageRequest $request)
     {
-        //
+        $request->validated();
+
+        Image::create([
+            "Src" => $request->get("Src"),
+            "Alt" => $request->get("Alt")
+        ]);
+
+        return redirect()->route("admin.image.index")->withErrors([
+            "success" => "Tạo thành công "
+        ]);
     }
 
     /**
@@ -56,9 +78,13 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function edit(Image $image)
+    public function edit($id)
     {
-        //
+        $img = Image::findOrFail($id);
+
+        return view("admin.image.edit")->with([
+            "image" => $img
+        ]);
     }
 
     /**
@@ -68,9 +94,19 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Image $image)
+    public function update(ImageRequest $request, $id)
     {
-        //
+        $img = Image::findOrFail($id);
+
+        $request->validated();
+
+        $img->Src = $request->get("Src");
+        $img->Alt = $request->get("Alt");
+        $img->save();
+
+        return redirect()->route("admin.image.index")->withErrors([
+            "success" => "Cập nhật thành công"
+        ]);
     }
 
     /**
