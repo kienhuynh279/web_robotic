@@ -1,13 +1,13 @@
 @extends('layouts.backend')
 
 @section('title')
-Trang tạo tài khoản
+Trang tạo dịch vụ
 @endsection
 
 @section('content')
-<form action="{{route("admin.application.store")}}" method="post">
+<form action="{{route("admin.service.store")}}" method="post">
     @csrf
-   @include("admin.application.inc._form-control")
+   @include("admin.service.inc._form-control")
 </form>
 @endsection
 

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ServiceRequest;
 use App\Models\Service;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -13,9 +15,23 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $filter = [];
+
+        if($request->has("title")) {
+            array_push($filter, [
+                "Title", "like", "%".$request->get("title")."%"
+            ]);
+        }
+        $type = Type::all();
+
+        $service = Service::where($filter)->paginate(20);
+
+        return view("admin.service.index")->with([
+            "service" => $service,
+            "type" => $type
+        ]);
     }
 
     /**
@@ -25,7 +41,10 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        $type = Type::all();
+        return view("admin.service.create", [
+            "type" => $type
+        ]);
     }
 
     /**
@@ -34,9 +53,21 @@ class ServiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ServiceRequest $request)
     {
-        //
+        $request->validated();
+
+        Service::create([
+            "Title" => $request->get("Title"),
+            "TypeId" => $request->get("TypeId"),
+            "Image" => $request->get("Image"),
+            "Description" => $request->get("Description"),
+            "Status" => 1,
+        ]);
+
+        return redirect()->route("admin.service.index")->withErrors([
+            "success" => "Tạo ứng dụng thành công"
+        ]);
     }
 
     /**
@@ -56,9 +87,14 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        $type = Type::all();
+        return view("admin.service.edit")->with([
+            "service" => $service,
+            "type" => $type
+        ]);
     }
 
     /**
@@ -68,9 +104,22 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(ServiceRequest $request, $id)
     {
-        //
+        $service = Service::findOrFail($id);
+
+        $request->validated();
+
+        $service->Title = $request->get("Title");
+        $service->Image = $request->get("Image");
+        $service->TypeId = $request->get("TypeId");
+        $service->Description = $request->get("Description");
+        $service->Status = 1;
+        $service->save();
+
+        return redirect()->route("admin.service.index")->withErrors([
+            "success" => "Chỉnh sửa dịch vụ thành công"
+        ]);
     }
 
     /**
@@ -79,8 +128,12 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy($id)
     {
-        //
+        Service::findOrFail($id)->delete();
+
+        return redirect()->route("admin.service.index")->withErrors([
+            "success" => "Xóa dịch vụ thành công"
+        ]);
     }
 }

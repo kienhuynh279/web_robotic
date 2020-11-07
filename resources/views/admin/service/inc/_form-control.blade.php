@@ -28,14 +28,23 @@
     @slot('slot')
     <div class="form-row">
         <x-input-form type="text" label="Tiêu đề" name="Title" classGroup="col-md" class="" placeholder="Tiêu đề"
-            :value="$application->Title ?? ''" />
+            :value="$service->Title ?? ''" />
+    </div>
+
+    <div class="form-group">
+        <label for="example-select">Chọn loại dịch vụ</label>
+            <select class="form-control" id="example-select" name="TypeId">
+                @foreach ($type as $type)
+                    <option value="{{ $type->TypeId }}"> {{ $type->Title }}</option>
+                @endforeach
+            </select>
     </div>
 
     <div class="form-group">
         <label for="">Ảnh đại diện</label>
         <div class="input-group">
             <input type="text" class="form-control @error("Image") is-invalid @enderror" id="Image" name="Image"
-                placeholder="Hình ảnh" value="{{!old("Image") ? $application->Image ?? false ? $application->Image : old("Image") : old("Image") }}">
+                placeholder="Hình ảnh" value="{{!old("Image") ? $service->Image ?? false ? $service->Image : old("Image") : old("Image") }}">
             <div class="input-group-append">
                 <button type="button" class="btn btn-dark" onclick="selectFileCKFinder('Image')">Chọn ảnh</button>
             </div>
@@ -48,7 +57,7 @@
 
     <div class="form-group">
         <label for="editor" class="@error("Description") text-danger @enderror">Miêu tả</label>
-        <textarea id="editor" class="form-control" name="Description" rows="3">{{!old("Description") ? $application->Description ?? false ? $application->Description : old("Description") : old("Description") }}</textarea>
+        <textarea id="editor" class="form-control" name="Description" rows="3">{{!old("Description") ? $service->Description ?? false ? $service->Description : old("Description") : old("Description") }}</textarea>
     </div>
 
     @endslot
