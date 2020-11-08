@@ -49,15 +49,15 @@ class ImageController extends Controller
      */
     public function store(ImageRequest $request)
     {
-        $request->validated();
+        $img = Image::Create();
 
-        Image::create([
-            "Src" => $request->get("Src"),
-            "Alt" => $request->get("Alt")
-        ]);
+        $request->validated();
+        $img->Src = $request->get("Src");
+        $img->Alt = $request->get("Alt");
+        $img->save();
 
         return redirect()->route("admin.image.index")->withErrors([
-            "success" => "Tạo thành công "
+            "success" => "Tao thành công"
         ]);
     }
 
@@ -99,7 +99,6 @@ class ImageController extends Controller
         $img = Image::findOrFail($id);
 
         $request->validated();
-
         $img->Src = $request->get("Src");
         $img->Alt = $request->get("Alt");
         $img->save();
