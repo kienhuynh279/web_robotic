@@ -5,55 +5,131 @@ Trang tài liệu
 @endsection
 
 @section('content')
-@include('client.components.banner')
 
-<style>
-    img {
-        width: 100%;
-        vertical-align: middle;
-        margin: 10px;
-    }
-</style>
+<section id="portfolio">
+        <div class="container">
+            <div class="center">
+               <h2>Gallrey</h2>
+               
+            </div>
+        
 
-<div class="container px-0">
-    <div class="d-flex py-5">
-        <div class="column pr-2" style="flex: 1">
-            <a href="#">
-                <img src="http://127.0.0.1:8000/assets/client/img/595x240/02.jpg" alt="">
-            </a>
-            <a href="#">
-                <img src="https://c4.wallpaperflare.com/wallpaper/210/941/242/samurai-katana-warrior-fantasy-art-wallpaper-preview.jpg" alt="">
-            </a>
-            <a href="#">
-                <img src="http://127.0.0.1:8000/assets/client/img/595x240/02.jpg" alt="">
-            </a>
+            <ul class="portfolio-filter text-center">
+                <li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Creative</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".html">Photography</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Web Development</a></li>
+            </ul><!--/#portfolio-filter-->
+
+            <div class="row">
+                <div class="portfolio-items">
+                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ asset('assets/client/images/portfolio/recent/item1.png') }}" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="{{ asset('assets/client/images/portfolio/recent/item1.png') }}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ asset('assets/client/images/portfolio/recent/item2.png') }}" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="{{ asset('assets/client/images/portfolio/full/item2.png') }}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ asset('assets/client/images/portfolio/recent/item3.png') }}" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="{{ asset('assets/client/images/portfolio/full/item3.png') }}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>        
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ asset('assets/client/images/portfolio/recent/item4.png') }}" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="{{ asset('assets/client/images/portfolio/full/item4.png') }}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>           
+                    </div><!--/.portfolio-item-->
+          
+                    <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ asset('assets/client/images/portfolio/recent/item5.png') }}" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="{{ asset('assets/client/images/portfolio/full/item5.png') }}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>      
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ asset('assets/client/images/portfolio/recent/item6.png') }}" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="{{ asset('assets/client/images/portfolio/full/item6.png') }}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>         
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ asset('assets/client/images/portfolio/recent/item7.png') }}" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="{{ asset('assets/client/images/portfolio/full/item7.png') }}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ asset('assets/client/images/portfolio/recent/item8.png') }}" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="{{ asset('assets/client/images/portfolio/full/item8.png') }}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+                </div>
+            </div>
         </div>
-
-        <div class="column pl-2" style="flex: 1">
-            <a href="#">
-                <img src="https://wallpaperaccess.com/full/87215.jpg" alt="">
-            </a>
-            <a href="#">
-                <img src="https://i.imgur.com/pj0h7aO.jpg" alt="">
-            </a>
-            <a href="#">
-                <img src="https://wallpaperaccess.com/full/87215.jpg" alt="">
-            </a>
-        </div>
-    </div>
-
-    <div class="text-center">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
+    </section><!--/#portfolio-item-->
 @endsection
 
 @section('js_after')

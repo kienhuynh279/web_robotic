@@ -87,9 +87,9 @@ Trang quản lý tin tức
 
                             <td class="d-none d-md-table-cell text-center font-size-sm">
                                 <a class="font-w600" href="#">{{$newsItem->Title}}</a>
-                            </td>
+                            </td>x
 
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">{{substr($newsItem->Description,0, 300)}}</td>
+                            <td class="d-none d-sm-table-cell text-center font-size-sm">{!!substr($newsItem->Description,0, 300)!!}</td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 {{date("d/m/Y H:i:s", strtotime($newsItem->Create_at))}}
                             </td>

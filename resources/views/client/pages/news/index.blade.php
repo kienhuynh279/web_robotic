@@ -5,97 +5,68 @@ Trang tài liệu
 @endsection
 
 @section('content')
-@include('client.components.banner')
+    <section id="blog" class="container">
+        <div class="center">
+            <h2>NEWS</h2>            
+        </div>
 
-<div class="container px-0">
-    <h2 style="margin-top:20px" class="text-center">News</h2>
-    <div class="row py-5">
-        <div class="col-md-4 mb-5">
-            <div class="card">
-                <a href="{{ route('detailNew') }}">
-                    <img class="card-img-top" src="{{ asset('assets/client/img/595x483/01.jpg')}}" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">5 Top robotics Solutions Impacting Hospital Care During A</h4>
-                        <small class="font-sm mb-3 d-block text-secondary">By techgroupadmin | May 29, 2020 | News, press</small>
-                        <p class="card-text font-italic">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4 mb-5">
-            <div class="card">
-            <a href="{{ route('detailNew') }}">
-                <img class="card-img-top" src="{{ asset('assets/client/img/595x483/01.jpg')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">5 Top robotics Solutions Impacting Hospital Care During A</h4>
-                    <small class="font-sm mb-3 d-block text-secondary">By techgroupadmin | May 29, 2020 | News, press</small>
-                    <p class="card-text font-italic">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </a>
-            </div>
-        </div>
-        <div class="col-md-4 mb-5">
-            <div class="card">
-            <a href="{{ route('detailNew') }}">
-                <img class="card-img-top" src="{{ asset('assets/client/img/595x483/01.jpg')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">5 Top robotics Solutions Impacting Hospital Care During A</h4>
-                    <small class="font-sm mb-3 d-block text-secondary">By techgroupadmin | May 29, 2020 | News, press</small>
-                    <p class="card-text font-italic">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </a>
-            </div>
-        </div>
-        <div class="col-md-4 mb-5">
-            <div class="card">
-            <a href="{{ route('detailNew') }}">
-                <img class="card-img-top" src="{{ asset('assets/client/img/595x483/01.jpg')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">5 Top robotics Solutions Impacting Hospital Care During A</h4>
-                    <small class="font-sm mb-3 d-block text-secondary">By techgroupadmin | May 29, 2020 | News, press</small>
-                    <p class="card-text font-italic">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </a>
-            </div>
-        </div>
-        <div class="col-md-4 mb-5">
-            <div class="card">
-            <a href="{{ route('detailNew') }}">
-                <img class="card-img-top" src="{{ asset('assets/client/img/595x483/01.jpg')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">5 Top robotics Solutions Impacting Hospital Care During A</h4>
-                    <small class="font-sm mb-3 d-block text-secondary">By techgroupadmin | May 29, 2020 | News, press</small>
-                    <p class="card-text font-italic">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </a>
-            </div>
-        </div>
-        <div class="col-md-4 mb-5">
-            <div class="card">
-            <a href="{{ route('detailNew') }}">
-                <img class="card-img-top" src="{{ asset('assets/client/img/595x483/01.jpg')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">5 Top robotics Solutions Impacting Hospital Care During A</h4>
-                    <small class="font-sm mb-3 d-block text-secondary">By techgroupadmin | May 29, 2020 | News, press</small>
-                    <p class="card-text font-italic">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </a>
-            </div>
-        </div>
-    </div>
+        <div class="blog">
+            <div class="row">
+                 <div class="col-md-12">
+                    <div class="blog-item">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-2 text-center">
+                                <div class="entry-meta">
+                                    <span id="publish_date">07  NOV</span>
+                                    <span><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
+                                    <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
+                                    <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+                                </div>
+                            </div>
+                                
+                            <div class="col-xs-12 col-sm-10 blog-content">
+                                <a href="#"><img class="img-responsive img-blog" src="{{ asset('assets/client/images/blog/blog1.jpg') }}" width="100%" alt="" /></a>
+                                <h2><a href="{{ route('detailNew') }}">5 Top Robotics Solutions Impacting Hospital Care During A Pandemi</a></h2>
+                                <h3>StartUs Insight's Innovation Analysts recently looked into emerging technologies and up-and-coming startups working on emerging solutions that mitigate the effects of the Coronavirus pandemic. Take a look at some of the top robotics solutions impacting hospital care...</h3>
+                                <a class="btn btn-primary readmore" href="blog-item.html">Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>    
+                    </div><!--/.blog-item-->
+                        
+                    <div class="blog-item">
+                        <div class="row">
+                             <div class="col-sm-2 text-center">
+                                <div class="entry-meta"> 
+                                    <span id="publish_date">07  NOV</span>
+                                    <span><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
+                                    <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
+                                    <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-10 blog-content">
+                                <a href=""><img class="img-responsive img-blog" src="{{ asset('assets/client/images/blog/blog2.jpg') }}" width="100%" alt="" /></a>
+                                <h2><a href="{{ route('detailNew') }}">Consequat bibendum quam liquam viverra</a></h2>
+                                <h3>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper. Nullam sapien elit, lacinia eu tristique non.posuere at mi. Morbi at turpis id urna ullamcorper ullamcorper.</h3>
+                                <a class="btn btn-primary readmore" href="blog-item.html">Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>    
+                    </div><!--/.blog-item-->
+                        
+                    <ul class="pagination pagination-lg">
+                        <li><a href="#"><i class="fa fa-long-arrow-left"></i>Previous Page</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">Next Page<i class="fa fa-long-arrow-right"></i></a></li>
+                    </ul><!--/.pagination-->
+                </div><!--/.col-md-8-->
 
-    <div class="text-center">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
+                
+            </div><!--/.row-->
+        </div>
+    </section><!--/#blog-->
 @endsection
 
 @section('js_after')

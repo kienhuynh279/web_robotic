@@ -5,102 +5,81 @@ Trang tài liệu
 @endsection
 
 @section('content')
-
-<style>
-    img {
-        width: 100%;
-        vertical-align: middle;
-        margin: 10px;
-    }
-</style>
-
-<div class="container px-0">
-    <div class="row py-5">
-        <div class="col-12">
-            <h2 class="text-left">Techmetics launches fleet of autonomous navigation robots for service industries</h2>
-            <p class="text-left">by Admin | create at: </p>
-              <img class="w-100" height="400" style="object-fit: cover"
-                src="{{asset("assets/client/img/595x240/02.jpg")}}" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. 
-            Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, 
-            tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
-            Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales 
-            nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. 
-            Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. 
-            Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</p>
-            <a href="#">Click Here More</a>
+ <section id="blog" class="container">
+        <div class="center">
+            <h2>TITLE...</h2>            
         </div>
-    </div>
-</div>
 
-<div class="container">
-    <h1 class="text-center">Lated News</h1>
-    <div class="swiper-container mb-5">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="#">
-                    <img class="w-100 h-100" style="object: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
-                        alt="">
-                    <h5>Lorem</h5>
-                    <p>by Admin</p>
-                    <p>Create at: </p>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#">
-                    <img class="w-100 h-100" style="object: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
-                        alt="">
-                    <h5>Lorem</h5>
-                    <p>by Admin</p>
-                    <p>Create at: </p>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#">
-                    <img class="w-100 h-100" style="object: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
-                        alt="">
-                    <h5>Lorem</h5>
-                    <p>by Admin</p>
-                    <p>Create at: </p>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#">
-                    <img class="w-100 h-100" style="object: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
-                        alt="">
-                    <h5>Lorem</h5>
-                    <p>by Admin</p>
-                    <p>Create at: </p>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#">
-                    <img class="w-100 h-100" style="object: cover" src="{{asset("assets/client/img/595x240/02.jpg")}}"
-                        alt="">
-                    <h5>Lorem</h5>
-                    <p>by Admin</p>
-                    <p>Create at: </p>
-                </a>
-            </div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
-</div>
+        <div class="blog">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-item">
+                        <img class="img-responsive img-blog" src="{{ asset('assets/client/images/blog/blog1.jpg') }}" width="100%" alt="" />
+                            <div class="row">  
+                                <div class="col-xs-12 col-sm-2 text-center">
+                                    <div class="entry-meta">
+                                        <span id="publish_date">07  NOV</span>
+                                        <span><i class="fa fa-user"></i> <a href="#"> John Doe</a></span>
+                                        <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
+                                        <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-10 blog-content">
+                                    <h2>5 Top Robotics Solutions Impacting Hospital Care During A Pandemi</h2>
+                                    <p>StartUs Insight's Innovation Analysts recently looked into emerging technologies and up-and-coming startups working on emerging solutions that mitigate the effects of the Coronavirus pandemic. Take a look at some of the top robotics solutions impacting hospital care...</p>
 
-<script type="module">
-    import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
-  
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      freeMode: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
+                                    <p>StartUs Insight's Innovation Analysts recently looked into emerging technologies and up-and-coming startups working on emerging solutions that mitigate the effects of the Coronavirus pandemic. Take a look at some of the top robotics solutions impacting hospital care...</p>
+
+                                    
+
+                                </div>
+                            </div>
+                        </div><!--/.blog-item-->
+                       
+
+
+
+                    </div><!--/.col-md-8-->
+
+                <aside class="col-md-4">
+
+    				
+    				<div class="widget categories">
+                        <h3>ANOTHER NEWS</h3>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="single_comments">
+    								<img src="{{ asset('assets/client/images/blog/avatar3.png') }}" alt=""  />
+    								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                                    <div class="entry-meta small muted">
+                                        <span>By <a href="#">Alex</a></span </span>On <a href="#">Creative</a></span>
+                                    </div>
+    							</div>
+    							<div class="single_comments">
+    								<img src="{{ asset('assets/client/images/blog/avatar3.png') }}" alt=""  />
+    								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+    								<div class="entry-meta small muted">
+                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
+                                    </div>
+    							</div>
+    							<div class="single_comments">
+    								<img src="{{ asset('asset/client/images/blog/avatar3.png') }}" alt=""  />
+    								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+    								<div class="entry-meta small muted">
+                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
+                                    </div>
+    							</div>
+    							
+                            </div>
+                        </div>                     
+                    </div><!--/.recent comments-->	
+                </aside>     
+
+            </div><!--/.row-->
+
+         </div><!--/.blog-->
+
+    </section><!--/#blog-->
 @endsection
 
 @section('js_after')
