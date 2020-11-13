@@ -17,53 +17,19 @@
             <div class="row">			
 				
                 <div class="features">				
+                    @forelse ($applications as $app)
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-							<i class='fa fa-heartbeat' style='color:red'></i>
-                            <h2>Hospital</h2>
-                            <p>Autonomous Mobile robot solutions to transport and deliver lab samples, medication, hospital supplies and much more enabling the staff to focus on ‘caring’</p>
+							{{-- <i class='fa fa-heartbeat' style='color:red'></i> --}}
+                            <img src="{{$app->Image}}" style="width: 200px; height: 200px; object-fit: cover; object-position: center; border-radius: 50%;" alt="">
+                            <h2>{{$app->Title}}</h2>
+                            <p>{!!$app->Description!!}</p>
                         </div>
                     </div><!--/.col-md-4-->
+                    @empty
+                        <h4 class="text-center">Phần này chưa có dữ liệu</h4>
+                    @endforelse
 
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-hospital-o" style='color:#fc7c02'></i>
-                            <h2>Hospitality</h2>
-                            <p>Dynamic autonomous navigation with round the clock delivery of linen, food supplies and anything a customer could request from the room. Our Multi-point delivery robots are a perfect solution for ...</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-city"></i>
-                            <h2>Office</h2>
-                            <p>Requires no facility modifications and available with many customization options. Create an efficiency work environment by automating delivery of documents, office facilities,…</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-                
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-shopping-cart" style='color:green'></i>
-                            <h2>Retail</h2>
-                            <p>An innovative way to attract customers to sell tickets, directory information, and vouchers. All this made possible even with less staff. Our robots are a boost to your business</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-shipping-fast" style='color:#000'></i>
-                            <h2>Logistics</h2>
-                            <p>AMR has the capability of moving materials and clinical supplies almost anywhere you need. High payload, cart automatic pickup, inventory tracking, etc.</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fas fa-users" style='color:orange'></i>
-                            <h2>Events</h2>
-                            <p>From transporting high-value chips, serving drinks and food, to being an attraction in itself, our robot solutions are a perfect investment for events</p>
-                        </div>
-                    </div><!--/.col-md-4-->
                 </div><!--/.services-->
             </div><!--/.row-->    
         </div><!--/.container-->
