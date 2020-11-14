@@ -18,4 +18,14 @@ class ServiceController extends Controller
             'types' =>$type
         ]);
     }
+
+    public function solution()
+    {
+        return view('client.pages.service.solution');
+    }
+
+    public function traning()
+    {
+        return view('client.pages.service.traning');
+    }
 }

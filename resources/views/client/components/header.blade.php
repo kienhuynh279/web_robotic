@@ -52,10 +52,10 @@
                         </li>					
 
                         <li class="dropdown ">
-                            <a href="{{ route('service') }}" class="dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('service') }}">Solutions</a></li>
-                                <li><a href="{{ route('service') }}">Training</a></li>                                                             
+                                <li><a href="{{ route('solution') }}">Solutions</a></li>
+                                <li><a href="{{ route('traning') }}">Training</a></li>                                                             
                             </ul>
                         </li>     
 						

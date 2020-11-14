@@ -27,12 +27,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\Client\HomeController@index')->name('home');
 Route::get('/docs', 'App\Http\Controllers\Client\DocsController@index')->name('docs');
 Route::get('/news', 'App\Http\Controllers\Client\NewsController@index')->name('news');
-Route::get('/detail-news', 'App\Http\Controllers\Client\NewsController@detail')->name('detailNew');
+Route::get('/detail-news/{NewId}', 'App\Http\Controllers\Client\NewsController@detail')->name('detailNew');
 Route::get('/product', 'App\Http\Controllers\Client\ProductController@index')->name("product");
 Route::get('/gallery', 'App\Http\Controllers\Client\GalleryController@index')->name('gallery');
 Route::get('/about', 'App\Http\Controllers\Client\AboutController@index')->name('about');
-Route::get('/service', 'App\Http\Controllers\Client\ServiceController@index')->name('service');
 Route::get('/contact', 'App\Http\Controllers\Client\ContactController@index')->name('contact');
+Route::get('/solution', 'App\Http\Controllers\Client\ServiceController@solution')->name('solution');
+Route::get('/traning', 'App\Http\Controllers\Client\ServiceController@traning')->name('traning');
 
 Route::get("/login", [AuthController::class, "login"],)->name("auth.login")->middleware("guest");
 Route::post("/login", [AuthController::class, "handle_login"])->name("auth.handle_login")->middleware("guest");
