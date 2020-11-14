@@ -1,72 +1,35 @@
     <section id="main-slider" class="no-margin">
         <div class="carousel slide">
             <ol class="carousel-indicators">
-                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
+                @for ($i = 0; $i < count($banners); $i++)
+                <li data-target="#main-slider" data-slide-to="{{$i}}" class="@if($i === 1) active @endif"></li>
+                @endfor
             </ol>
             <div class="carousel-inner">
 
-                <div class="item active" style="background-image: url({{ asset('assets/client/images/slider/bg1.jpg') }})">
+                @foreach ($banners as $banner)
+                <div class="item @if($banner->BannerId === 1) active @endif" style="background-image: url({{ $banner->Background }})">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                    <h1 class="animation animated-item-1">{{$banner->Title}}</h1>
+                                    <h2 class="animation animated-item-2">{{$banner->Description}}</h2>
+                                    <a class="btn-slide animation animated-item-3" href="{{$banner->Link}}">Read More</a>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="{{ asset('assets/client/images/slider/img1.png') }}" class="img-responsive">
+                                    <img src="{{$banner->Object}}" class="img-responsive">
                                 </div>
                             </div>
 
                         </div>
                     </div>
                 </div><!--/.item-->
+                @endforeach
 
-                <div class="item" style="background-image: url({{ asset('assets/client/images/slider/bg2.jpg') }})">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="{{ asset('assets/client/images/slider/img2.png') }}" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url({{ asset('assets/client/images/slider/bg3.jpg') }})">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="{{ asset('assets/client/images/slider/img3.png') }}" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
             </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
         <a class="prev hidden-xs" href="#main-slider" data-slide="prev">

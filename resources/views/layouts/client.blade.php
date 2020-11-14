@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>HOME | ARAR</title>
+    <title>@yield('title', "HOME | ARAR")</title>
 
     <!-- Link - Meta - Common -->
     @include('client.inc.head-import')

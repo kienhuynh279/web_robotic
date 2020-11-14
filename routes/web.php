@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ApplicationController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\UsersController;
@@ -38,6 +39,11 @@ Route::post("/login", [AuthController::class, "handle_login"])->name("auth.handl
 Route::post("/logout", [AuthController::class, "handle_logout"])->name("auth.handle_logout")->middleware("auth");
 
 Route::group(["prefix" => "admin", "middleware" => ["auth"]], function () {
+
+    Route::match(["get", "post"], "", function() {
+        return redirect()->route("admin.dashboard");
+    });
+
     Route::resource("users", UsersController::class, [
         "as" => "admin"
     ]);
@@ -70,11 +76,15 @@ Route::group(["prefix" => "admin", "middleware" => ["auth"]], function () {
         "as" => "admin"
     ]);
 
+    Route::resource('banners', BannerController::class, [
+        "as" => "admin"
+    ]);
+
     Route::resource('service', ServiceController::class, [
         "as" => "admin"
     ]);
 
     Route::get("/dashboard", function () {
         return view("admin.dashboard");
-    });
+    })->name("admin.dashboard");
 });

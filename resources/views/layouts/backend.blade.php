@@ -56,7 +56,7 @@
                     true
                 ),
             ],
-            "Hệ thống",
+            "Modules",
             true
         ),
         module(
@@ -319,6 +319,39 @@
                 ),
             ],
             "",
+            true
+        ),
+
+        module(
+            "Quản trị Banner",
+            'admin/banners',
+            "#",
+            "fa fa-image",
+            [
+                module(
+                    "Danh sách Banner",
+                    'admin/banners/',
+                    route("admin.banners.index"),
+                    "fa fa-list",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Tạo thêm Banner",
+                    'admin/banners/create',
+                    route("admin.banners.create"),
+                    "fa fa-edit",
+                    [
+                        
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "Hệ thống",
             true
         ),
     ];
