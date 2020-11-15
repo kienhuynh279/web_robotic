@@ -57,7 +57,8 @@ class BannerController extends Controller
             "Description" => $request->get("Description"),
             "Link" => $request->get("Link"),
             "Background" => $request->get("Background"),
-            "Object" => $request->get("Object")
+            "Object" => $request->get("Object"),
+            "Video" => $request->get("Video")
         ]);
 
         return redirect()->route("admin.banners.index")->withErrors([

@@ -17,6 +17,7 @@ class Banner extends Model
         "Description",
         "Link",
         "Background",
-        "Object"
+        "Object",
+        "Video"
     ];
 }

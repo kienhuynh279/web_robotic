@@ -37,6 +37,21 @@
     </div>
 
     <div class="form-group">
+        <label for="Video">Video của bạn (Nếu không điền 2 ô ảnh đối tượng, ảnh nền)</label>
+        <div class="input-group">
+            <input type="text" class="form-control @error("Video") is-invalid @enderror" id="Video" name="Video"
+                placeholder="Hình ảnh" value="{{!old("Video") ? $banner->Video ?? false ? $banner->Video : old("Video") : old("Video") }}">
+            <div class="input-group-append">
+                <button type="button" class="btn btn-dark" onclick="selectFileCKFinder('Video')">Chọn video</button>
+            </div>
+        </div>
+
+        @error('Video')
+            <small class="text-danger">{{$message}}</small>
+        @enderror
+    </div>
+
+    <div class="form-group">
         <label for="">Ảnh đối tượng</label>
         <div class="input-group">
             <input type="text" class="form-control @error("Object") is-invalid @enderror" id="Object" name="Object"

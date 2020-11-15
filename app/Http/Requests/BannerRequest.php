@@ -27,8 +27,8 @@ class BannerRequest extends FormRequest
             "Title" => "required",
             "Description" => "required",
             "Link" => "required",
-            "Background" => "required",
-            "Object" => "required"
+            "Background" => "",
+            "Object" => ""
         ];
     }
 }
