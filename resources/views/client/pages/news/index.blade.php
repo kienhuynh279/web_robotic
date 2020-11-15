@@ -26,9 +26,9 @@ Trang tài liệu
                             </div>
                             <div class="col-xs-12 col-sm-10 blog-content">
                                 <a href="#"><img class="img-responsive img-blog" src="{{ $new->Image}}" width="100%" alt="" /></a>
-                            <h2><a href="{{ route('detailNew') }}">{{ $new->title }}</a></h2>
+                            <h2><a href="{{ route('detailNew', $new->NewId) }}">{{ $new->title }}</a></h2>
                                 <h3>{!! $new->Description !!}</h3>
-                            <a class="btn btn-primary readmore" href="{{ route('detailNew',$new->NewId) }}">Read More <i class="fa fa-angle-right"></i></a>
+                            <a class="btn btn-primary readmore" href="{{ route('detailNew', $new->NewId) }}">Read More <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>    
                     </div><!--/.blog-item-->

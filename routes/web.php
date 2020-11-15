@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Client routes
 Route::get('/', 'App\Http\Controllers\Client\HomeController@index')->name('home');
 Route::get('/docs', 'App\Http\Controllers\Client\DocsController@index')->name('docs');
 Route::get('/news', 'App\Http\Controllers\Client\NewsController@index')->name('news');
@@ -39,6 +40,7 @@ Route::get("/login", [AuthController::class, "login"],)->name("auth.login")->mid
 Route::post("/login", [AuthController::class, "handle_login"])->name("auth.handle_login")->middleware("guest");
 Route::post("/logout", [AuthController::class, "handle_logout"])->name("auth.handle_logout")->middleware("auth");
 
+// Admin routes
 Route::group(["prefix" => "admin", "middleware" => ["auth"]], function () {
 
     Route::match(["get", "post"], "", function() {
