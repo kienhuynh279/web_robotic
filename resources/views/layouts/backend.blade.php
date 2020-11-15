@@ -175,7 +175,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm tin tức",
+                    "Tạo thêm hình ảnh",
                     'admin/image/create',
                     route("admin.image.create"),
                     "fa fa-edit",
@@ -208,7 +208,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm tin tức",
+                    "Tạo thêm sản phẩm",
                     'admin/product/create',
                     route("admin.product.create"),
                     "fa fa-edit",

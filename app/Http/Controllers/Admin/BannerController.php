@@ -111,6 +111,7 @@ class BannerController extends Controller
         $banner->Link = $request->get("Link");
         $banner->Background = $request->get("Background");
         $banner->Object = $request->get("Object");
+        $banner->Video = $request->get("Video");
 
         $banner->save();
 

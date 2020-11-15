@@ -30,6 +30,7 @@ Route::get('/docs', 'App\Http\Controllers\Client\DocsController@index')->name('d
 Route::get('/news', 'App\Http\Controllers\Client\NewsController@index')->name('news');
 Route::get('/detail-news/{NewId}', 'App\Http\Controllers\Client\NewsController@detail')->name('detailNew');
 Route::get('/product', 'App\Http\Controllers\Client\ProductController@index')->name("product");
+Route::get('/product/{id}', 'App\Http\Controllers\Client\ProductController@detail')->name("productDetail");
 Route::get('/gallery', 'App\Http\Controllers\Client\GalleryController@index')->name('gallery');
 Route::get('/about', 'App\Http\Controllers\Client\AboutController@index')->name('about');
 Route::get('/contact', 'App\Http\Controllers\Client\ContactController@index')->name('contact');

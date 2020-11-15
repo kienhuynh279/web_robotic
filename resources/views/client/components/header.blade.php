@@ -42,12 +42,12 @@
                         <li class="{{ activeMenu('') }}"><a href="{{ route('home') }}">Home</a></li>
                         
 						<li class="dropdown {{ activeMenu('product') }}">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <i class="fa fa-angle-down"></i></a>
+                            <a href="{{route("product")}}" class="dropdown-toggle" data-toggle="dropdown">Products <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">ARARBOT BASE</a></li>
-                                <li><a href="#">ARARBOT DELI</a></li>
-                                <li><a href="#">ARARBOT FOLO</a></li>
-								 <li><a href="#">ARARBOT MONI </a></li>                                
+                                <li><a href="{{route("product")}}">ARARBOT BASE</a></li>
+                                <li><a href="{{route("product")}}">ARARBOT DELI</a></li>
+                                <li><a href="{{route("product")}}">ARARBOT FOLO</a></li>
+								 <li><a href="{{route("product")}}">ARARBOT MONI </a></li>                                
                             </ul>
                         </li>					
 
