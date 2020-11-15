@@ -21,6 +21,7 @@ class CreateProductTable extends Migration
             $table->text('Specification')->nullable()->default(null);
             $table->text('Dimension')->nullable()->default(null);
             $table->text('Application')->nullable()->default(null);
+            $table->text('Description')->nullable()->default(null);
             $table->timestamps();   
             $table->tinyInteger('Status')->default('1');
 

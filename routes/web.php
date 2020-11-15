@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\Client\HomeController@index')->name('home');
 Route::get('/docs', 'App\Http\Controllers\Client\DocsController@index')->name('docs');
 Route::get('/news', 'App\Http\Controllers\Client\NewsController@index')->name('news');
-Route::get('/detail-news/{NewId}', 'App\Http\Controllers\Client\NewsController@detail')->name('detailNew');
+Route::get('/detail-news/{id}', 'App\Http\Controllers\Client\NewsController@detail')->name('detailNew');
 Route::get('/product', 'App\Http\Controllers\Client\ProductController@index')->name("product");
 Route::get('/product/{id}', 'App\Http\Controllers\Client\ProductController@detail')->name("productDetail");
 Route::get('/gallery', 'App\Http\Controllers\Client\GalleryController@index')->name('gallery');

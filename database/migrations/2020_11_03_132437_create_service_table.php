@@ -21,7 +21,6 @@ class CreateServiceTable extends Migration
             $table->text('Description')->nullable()->default(null);
             $table->timestamps();   
             $table->tinyInteger('Status')->default('1');
-
             $table->foreign('TypeId')->references('TypeId')->on('Type');
         });
     }

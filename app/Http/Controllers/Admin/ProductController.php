@@ -63,6 +63,7 @@ class ProductController extends Controller
             "Specification" => $request->get("Specification"),
             "Dimension" => $request->get("Dimension"),
             "Application" => $request->get("Application"),
+            "Description" => $request->get("Description"),
             "Status" => 1,
         ]);
 
@@ -118,6 +119,7 @@ class ProductController extends Controller
         $product->Specification = $request->get("Specification");
         $product->Dimension = $request->get("Dimension");
         $product->Application = $request->get("Application");
+        $product->Description = $request->get("Description");
         $product->Status = 1;
         $product->save();
 

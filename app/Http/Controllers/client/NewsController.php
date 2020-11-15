@@ -17,12 +17,12 @@ class NewsController extends Controller
         ]);
     }
 
-    public function detail($NewId) {
+    public function detail($id) {
         
-        $new = News::findOrFail($NewId);
+        $news = News::findOrFail($id);
         
         return view("client.pages.news.detail",[
-            'new' => $new
+            'news' => $news
         ]);
     }
 }

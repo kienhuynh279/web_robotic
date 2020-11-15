@@ -14,6 +14,7 @@ Trang tài liệu
             <div class="row">
                  <div class="col-md-12">
                      @foreach($news as $new)
+                     
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-xs-12 col-sm-2 text-center">
