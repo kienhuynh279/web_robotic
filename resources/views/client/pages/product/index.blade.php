@@ -11,7 +11,7 @@ Trang sản phẩm
 @section('content')
 <div class="container px-0">
     <div class="py-5">
-        @include('client.components.slider')
+        {{-- @include('client.components.slider') --}}
 
         <div class="profile">
             <h1 class="text-center">ARARBOT BASE</h1>
