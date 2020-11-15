@@ -19,7 +19,7 @@
 
     $modules = [
         module(
-            "Tổng quan",
+            "Dashboard",
             'admin/dashboard/*',
             "dashboard",
             "fa fa-edit",
@@ -28,13 +28,13 @@
             true
         ),
         module(
-            "Quản trị tài khoản",
+            "Manage Account",
             'admin/users',
             "#",
             "fa fa-users",
             [
                 module(
-                    "Danh sách tài khoản",
+                    "List Account",
                     'admin/users/',
                     route("admin.users.index"),
                     "fa fa-list",
@@ -45,7 +45,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm tài khoản",
+                    "Add Account",
                     'admin/accounts/users',
                     route("admin.users.create"),
                     "fa fa-edit",
@@ -60,13 +60,13 @@
             true
         ),
         module(
-            "Quản trị tin tức",
+            "Manage News",
             'admin/news',
             "#",
             "fa fa-book",
             [
                 module(
-                    "Danh sách tin tức",
+                    "List News",
                     'admin/users/',
                     route("admin.news.index"),
                     "fa fa-list",
@@ -77,7 +77,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm tin tức",
+                    "Add News",
                     'admin/accounts/users',
                     route("admin.news.create"),
                     "fa fa-edit",
@@ -92,13 +92,13 @@
             true
         ),
         module(
-            "Quản trị thể loại",
+            "Manage Category Product",
             'admin/categories',
             "#",
             "fa fa-bookmark",
             [
                 module(
-                    "Danh sách thể loại",
+                    "List Category",
                     'admin/users/',
                     route("admin.categories.index"),
                     "fa fa-list",
@@ -109,7 +109,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm thể thoại",
+                    "Add Category",
                     'admin/accounts/users',
                     route("admin.categories.create"),
                     "fa fa-edit",
@@ -125,13 +125,13 @@
         ),
 
         module(
-            "Quản trị ứng dụng",
+            "Manage Application",
             'admin/application',
             "#",
             "fa fa-info-circle",
             [
                 module(
-                    "Danh sách ứng dụng",
+                    "List Application",
                     'admin/users/',
                     route("admin.application.index"),
                     "fa fa-list",
@@ -142,7 +142,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm ứng dụng",
+                    "Add Application",
                     'admin/accounts/users',
                     route("admin.application.create"),
                     "fa fa-edit",
@@ -158,13 +158,13 @@
         ),
 
         module(
-            "Quản trị hình ảnh",
+            "Manage Gallery",
             'admin/docs',
             "#",
             "fa fa-image",
             [
                 module(
-                    "Danh sách hình ảnh",
+                    "List Gallery",
                     'admin/image/',
                     route("admin.image.index"),
                     "fa fa-list",
@@ -175,7 +175,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm hình ảnh",
+                    "Add Gallery",
                     'admin/image/create',
                     route("admin.image.create"),
                     "fa fa-edit",
@@ -191,13 +191,13 @@
         ),
         
         module(
-            "Quản trị sản phẩm",
+            "Manage Product",
             'admin/product',
             "#",
             "fa fa-cube",
             [
                 module(
-                    "Danh sách sản phẩm",
+                    "List Product",
                     'admin/product/',
                     route("admin.product.index"),
                     "fa fa-list",
@@ -208,7 +208,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm sản phẩm",
+                    "Add Product",
                     'admin/product/create',
                     route("admin.product.create"),
                     "fa fa-edit",
@@ -224,13 +224,13 @@
         ),
 
         module(
-            "Quản trị dịch vụ",
+            "Manage Service",
             'admin/service',
             "#",
             "fa fa-check",
             [
                 module(
-                    "Danh sách dịch vụ",
+                    "List Service",
                     'admin/service/',
                     route("admin.service.index"),
                     "fa fa-list",
@@ -241,7 +241,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm dịch vụ",
+                    "Add Service",
                     'admin/service/create',
                     route("admin.service.create"),
                     "fa fa-edit",
@@ -256,47 +256,47 @@
             true
         ),
 
-        module(
-            "Quản trị tài liệu",
-            'admin/docs',
-            "#",
-            "fa fa-newspaper",
-            [
-                module(
-                    "Danh sách tài liệu",
-                    'admin/docs/',
-                    route("admin.docs.index"),
-                    "fa fa-list",
-                    [
+        // module(
+        //     "Quản trị tài liệu",
+        //     'admin/docs',
+        //     "#",
+        //     "fa fa-newspaper",
+        //     [
+        //         module(
+        //             "Danh sách tài liệu",
+        //             'admin/docs/',
+        //             route("admin.docs.index"),
+        //             "fa fa-list",
+        //             [
                         
-                    ] ,
-                    null,
-                    true
-                ),
-                module(
-                    "Tạo thêm tài liệu",
-                    'admin/docs/create',
-                    route("admin.docs.create"),
-                    "fa fa-edit",
-                    [
+        //             ] ,
+        //             null,
+        //             true
+        //         ),
+        //         module(
+        //             "Tạo thêm tài liệu",
+        //             'admin/docs/create',
+        //             route("admin.docs.create"),
+        //             "fa fa-edit",
+        //             [
                         
-                    ] ,
-                    null,
-                    true
-                ),
-            ],
-            "",
-            true
-        ),
+        //             ] ,
+        //             null,
+        //             true
+        //         ),
+        //     ],
+        //     "",
+        //     true
+        // ),
 
         module(
-            "Quản trị loại dịch vụ",
+            "Manage Category Service",
             'admin/type',
             "#",
             "fa fa-bookmark",
             [
                 module(
-                    "Danh sách loại dịch vụ",
+                    "List Category",
                     'admin/type/',
                     route("admin.type.index"),
                     "fa fa-list",
@@ -307,7 +307,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm loại dịch vụ",
+                    "Add Category",
                     'admin/type/create',
                     route("admin.type.create"),
                     "fa fa-edit",
@@ -323,13 +323,13 @@
         ),
 
         module(
-            "Quản trị Banner",
+            "Manage Banner",
             'admin/banners',
             "#",
             "fa fa-image",
             [
                 module(
-                    "Danh sách Banner",
+                    "List Banner",
                     'admin/banners/',
                     route("admin.banners.index"),
                     "fa fa-list",
@@ -340,7 +340,7 @@
                     true
                 ),
                 module(
-                    "Tạo thêm Banner",
+                    "Add Banner",
                     'admin/banners/create',
                     route("admin.banners.create"),
                     "fa fa-edit",
@@ -351,7 +351,7 @@
                     true
                 ),
             ],
-            "Hệ thống",
+            "System",
             true
         ),
     ];

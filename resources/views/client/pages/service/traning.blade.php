@@ -14,34 +14,20 @@
         </div>           
 
         <div class="row">
+            @foreach($type as $i)
+            {{-- @dd($i->Title) --}}
+            @if($i->Title == $route)
+            @dd($i->Title)
+            @foreach($tranings as $item)
             <div class="col-md-3 wow fadeInDown">
                 <div class="clients-comments text-center">
-                    <img src="images/services/t1.png"  alt="">
-                    <h3>Intro to Robot Programming – ROS</h3>
-                   
+                    <img src="{{ $item->Image }}"  alt="">
+                    <h3>{{$item->Title}}</h3>
                 </div>
             </div>
-            <div class="col-md-3 wow fadeInDown">
-                <div class="clients-comments text-center">
-                    <img src="images/services/t2.png"  alt="">
-                    <h3>Robot Navigation</h3>
-                    
-                </div>
-            </div>
-            <div class="col-md-3 wow fadeInDown">
-                <div class="clients-comments text-center">
-                    <img src="images/services/t3.png"  alt="">
-                    <h3>Machine Learning for Robots</h3>
-                  
-                </div>
-            </div>
-            <div class="col-md-3 wow fadeInDown">
-                <div class="clients-comments text-center">
-                    <img src="images/services/t4.png"  alt="">
-                    <h3>ROS Projects & Robotics Products</h3>
-                    
-                </div>
-            </div>
+            @endforeach
+            @endif
+            @endforeach
        </div>
 
     </div><!--/.container-->

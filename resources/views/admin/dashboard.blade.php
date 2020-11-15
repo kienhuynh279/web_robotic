@@ -1,5 +1,5 @@
 @extends('layouts.backend')
 
 @section('content')
-    Nội dung admin
+    Content Admin
 @endsection

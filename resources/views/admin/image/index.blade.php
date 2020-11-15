@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Trang quản lý tin tức
+Manage Gallery
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@ Trang quản lý tin tức
                         <i class="fa fa-plus"></i>
                     </div>
                     <p class="font-w600 font-size-sm text-success text-uppercase mb-0">
-                        Thêm ảnh
+                        Add Gallery
                     </p>
                 </div>
             </a>
@@ -22,7 +22,7 @@ Trang quản lý tin tức
     </div>
     <div class="block block-rounded">
         <div class="block-header block-header-default">
-            <h3 class="block-title">Danh sách ảnh</h3>
+            <h3 class="block-title">List Gallery</h3>
             <div class="block-options">
             </div>
         </div>
@@ -30,10 +30,10 @@ Trang quản lý tin tức
             <form action="{{route("admin.application.index")}}" method="GET" class="row">
                 <div class="form-group col-md">
                     <input type="text" class="form-control form-control-alt" id="dm-ecom-products-search"
-                        name="src" placeholder="Tìm kiếm với tên ứng dụng" value="{{request()->query("src")}}">
+                        name="src" placeholder="Search with title " value="{{request()->query("src")}}">
                 </div>
                 <div class="form-group col-md">
-                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                    <button class="btn btn-primary" type="submit">Search</button>
                 </div>
             </form>
         </div>
@@ -42,11 +42,11 @@ Trang quản lý tin tức
                 <table class="table table-borderless table-striped table-vcenter">
                     <thead>
                         <tr>
-                            <th class="d-none d-sm-table-cell text-center" style="width: 200px">Ảnh</th>
-                            <th style="width: 150px" class="d-none d-sm-table-cell text-center">Chú thích</th>
-                            <th class="d-none d-md-table-cell text-center">Ngày tạo</th>
-                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Trạng thái</th>
-                            <th class="text-center">Chức năng</th>
+                            <th class="d-none d-sm-table-cell text-center" style="width: 200px">Image</th>
+                            <th style="width: 150px" class="d-none d-sm-table-cell text-center">Note</th>
+                            <th class="d-none d-md-table-cell text-center">Create At</th>
+                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Status</th>
+                            <th class="text-center"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,12 +64,12 @@ Trang quản lý tin tức
                                 {{date("d/m/Y H:i:s", strtotime($img->created_at))}}
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
-                                <span class="badge badge-pill badge-primary">{{$img->Status === 1 ? "Kích hoạt" : "Vô hiệu hóa"}}</span>
+                                <span class="badge badge-pill badge-primary">{{$img->Status === 1 ? "Active" : "Unactive"}}</span>
                             </td>
 
                             <td class="text-center font-size-sm">
                                 
-                                <a title="Chỉnh sửa" class="btn btn-sm btn-alt-secondary" href="{{route("admin.image.edit", $img->ImageId)}}">
+                                <a title="Edit" class="btn btn-sm btn-alt-secondary" href="{{route("admin.image.edit", $img->ImageId)}}">
                                     <i class="fa fa-fw fa-edit"></i>
                                 </a>
 
@@ -77,7 +77,7 @@ Trang quản lý tin tức
                                     @csrf
                                     @method("DELETE")
                                 </form>
-                                <a title="Xóa" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$img->ImageId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                                <a title="Delete" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$img->ImageId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
                                     <i class="fa fa-fw fa-times text-danger"></i>
                                 </a>
                             </td>
@@ -86,7 +86,7 @@ Trang quản lý tin tức
                         <tr>
                             <td colspan="12">
                                 <div class="alert alert-danger mb-0" role="alert">
-                                    Không tìm thấy dữ liệu
+                                   No value data
                                 </div>
                             </td>
                         </tr>

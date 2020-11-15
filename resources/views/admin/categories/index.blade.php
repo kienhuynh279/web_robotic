@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Trang quản lý thể loại
+Manage Category Product
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@ Trang quản lý thể loại
                         <i class="fa fa-plus"></i>
                     </div>
                     <p class="font-w600 font-size-sm text-success text-uppercase mb-0">
-                        Thêm thể loại
+                        Add Category
                     </p>
                 </div>
             </a>
@@ -22,7 +22,7 @@ Trang quản lý thể loại
     </div>
     <div class="block block-rounded">
         <div class="block-header block-header-default">
-            <h3 class="block-title">Danh sách tin tức</h3>
+            <h3 class="block-title">List Category Product</h3>
             <div class="block-options">
                 <!-- Your option -->
                 {{-- <div class="dropdown">
@@ -55,10 +55,10 @@ Trang quản lý thể loại
             <form action="{{route("admin.categories.index")}}" method="GET" class="row">
                 <div class="form-group col-md">
                     <input type="text" class="form-control form-control-alt" id="dm-ecom-products-search"
-                        name="q" placeholder="Tìm kiếm với tên bài viết" value="{{request()->query("q")}}">
+                        name="q" placeholder="Search with title" value="{{request()->query("q")}}">
                 </div>
                 <div class="form-group col-md">
-                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                    <button class="btn btn-primary" type="submit">Search</button>
                 </div>
             </form>
         </div>
@@ -67,10 +67,10 @@ Trang quản lý thể loại
                 <table class="table table-borderless table-striped table-vcenter">
                     <thead>
                         <tr>
-                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Tên thể loại</th>
-                            <th class="d-none d-md-table-cell text-center">Ngày tạo</th>
-                            <th class="d-none d-md-table-cell text-center">Cập nhật lúc</th>
-                            <th class="text-center">Chức năng</th>
+                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Title</th>
+                            <th class="d-none d-md-table-cell text-center">Create at</th>
+                            <th class="d-none d-md-table-cell text-center">Update at</th>
+                            <th class="text-center"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -87,12 +87,12 @@ Trang quản lý thể loại
                                 {{date("d/m/Y H:i:s", strtotime($category->updated_at))}}
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
-                                <span class="badge badge-pill badge-primary">{{$category->Status === 1 ? "Kích hoạt" : "Vô hiệu hóa"}}</span>
+                                <span class="badge badge-pill badge-primary">{{$category->Status === 1 ? "Active" : "Unactive"}}</span>
                             </td>
 
                             <td class="text-center font-size-sm">
                                 
-                                <a title="Chỉnh sửa" class="btn btn-sm btn-alt-secondary" href="{{route("admin.categories.edit", $category->CategoryId)}}">
+                                <a title="Edit" class="btn btn-sm btn-alt-secondary" href="{{route("admin.categories.edit", $category->CategoryId)}}">
                                     <i class="fa fa-fw fa-edit"></i>
                                 </a>
 
@@ -100,7 +100,7 @@ Trang quản lý thể loại
                                     @csrf
                                     @method("DELETE")
                                 </form>
-                                <a title="Xóa" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$category->CategoryId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                                <a title="Delete" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$category->CategoryId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
                                     <i class="fa fa-fw fa-times text-danger"></i>
                                 </a>
                             </td>
@@ -109,7 +109,7 @@ Trang quản lý thể loại
                         <tr>
                             <td colspan="12">
                                 <div class="alert alert-danger mb-0" role="alert">
-                                    Không tìm thấy dữ liệu
+                                   No value data
                                 </div>
                             </td>
                         </tr>

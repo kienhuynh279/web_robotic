@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Chỉnh sửa ảnh
+Edit Gallery
 @endsection
 
 @section('content')

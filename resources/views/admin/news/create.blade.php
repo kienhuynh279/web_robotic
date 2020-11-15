@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Trang tạo tài khoản
+Add News
 @endsection
 
 @section('content')

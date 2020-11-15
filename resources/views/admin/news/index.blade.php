@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Trang quản lý tin tức
+Manager News
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@ Trang quản lý tin tức
                         <i class="fa fa-plus"></i>
                     </div>
                     <p class="font-w600 font-size-sm text-success text-uppercase mb-0">
-                        Thêm bài viết mới
+                        Add News
                     </p>
                 </div>
             </a>
@@ -22,7 +22,7 @@ Trang quản lý tin tức
     </div>
     <div class="block block-rounded">
         <div class="block-header block-header-default">
-            <h3 class="block-title">Danh sách tin tức</h3>
+            <h3 class="block-title">List News</h3>
             <div class="block-options">
                 <!-- Your option -->
                 {{-- <div class="dropdown">
@@ -55,10 +55,10 @@ Trang quản lý tin tức
             <form action="{{route("admin.news.index")}}" method="GET" class="row">
                 <div class="form-group col-md">
                     <input type="text" class="form-control form-control-alt" id="dm-ecom-products-search"
-                        name="q" placeholder="Tìm kiếm với tên bài viết" value="{{request()->query("q")}}">
+                        name="q" placeholder="Search with title" value="{{request()->query("q")}}">
                 </div>
                 <div class="form-group col-md">
-                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                    <button class="btn btn-primary" type="submit">Search</button>
                 </div>
             </form>
         </div>
@@ -67,13 +67,12 @@ Trang quản lý tin tức
                 <table class="table table-borderless table-striped table-vcenter">
                     <thead>
                         <tr>
-                            <th class="d-none d-sm-table-cell text-center" style="width: 70px">Ảnh</th>
-                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Tiêu đề bài viết</th>
-                            <th style="width: 300px" class="d-none d-md-table-cell text-center">Miêu tả ngắn</th>
-                            <th class="d-none d-md-table-cell text-center">Ngày tạo</th>
-                            <th style="width: 100px;" class="d-none d-md-table-cell text-center">Người viết</th>
-                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Trạng thái</th>
-                            <th class="text-center">Chức năng</th>
+                            <th class="d-none d-sm-table-cell text-center" style="width: 70px">Avatar</th>
+                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Title</th>
+                            <th class="d-none d-md-table-cell text-center">Create at</th>
+                            <th style="width: 100px;" class="d-none d-md-table-cell text-center">User</th>
+                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Status</th>
+                            <th class="text-center"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -87,9 +86,7 @@ Trang quản lý tin tức
 
                             <td class="d-none d-md-table-cell text-center font-size-sm">
                                 <a class="font-w600" href="#">{{$newsItem->Title}}</a>
-                            </td>x
-
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">{!!substr($newsItem->Description,0, 300)!!}</td>
+                            </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 {{date("d/m/Y H:i:s", strtotime($newsItem->Create_at))}}
                             </td>
@@ -99,12 +96,12 @@ Trang quản lý tin tức
                                 </span>
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
-                                <span class="badge badge-pill badge-primary">{{$newsItem->Status === 1 ? "Kích hoạt" : "Vô hiệu hóa"}}</span>
+                                <span class="badge badge-pill badge-primary">{{$newsItem->Status === 1 ? "Active" : "Unactive"}}</span>
                             </td>
 
                             <td class="text-center font-size-sm">
                                 
-                                <a title="Chỉnh sửa" class="btn btn-sm btn-alt-secondary" href="{{route("admin.news.edit", $newsItem->NewId)}}">
+                                <a title="Edit" class="btn btn-sm btn-alt-secondary" href="{{route("admin.news.edit", $newsItem->NewId)}}">
                                     <i class="fa fa-fw fa-edit"></i>
                                 </a>
 
@@ -112,7 +109,7 @@ Trang quản lý tin tức
                                     @csrf
                                     @method("DELETE")
                                 </form>
-                                <a title="Xóa" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$newsItem->NewId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                                <a title="Delete" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$newsItem->NewId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
                                     <i class="fa fa-fw fa-times text-danger"></i>
                                 </a>
                             </td>

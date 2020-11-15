@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Chỉnh sửa tài khoản
+Edit Banner
 @endsection
 
 @section('content')

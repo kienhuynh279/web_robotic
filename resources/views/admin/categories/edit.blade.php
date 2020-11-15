@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Chỉnh sửa thể loại
+Edit Category Product
 @endsection
 
 @section('content')

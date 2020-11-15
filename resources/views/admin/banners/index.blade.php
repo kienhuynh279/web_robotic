@@ -14,7 +14,7 @@ Trang quản lý Banner
                         <i class="fa fa-plus"></i>
                     </div>
                     <p class="font-w600 font-size-sm text-success text-uppercase mb-0">
-                        Thêm Banner
+                        Add Banner
                     </p>
                 </div>
             </a>
@@ -22,7 +22,7 @@ Trang quản lý Banner
     </div>
     <div class="block block-rounded">
         <div class="block-header block-header-default">
-            <h3 class="block-title">Danh sách Banner đã tạo</h3>
+            <h3 class="block-title">List Banner</h3>
             <div class="block-options">
             </div>
         </div>
@@ -30,10 +30,10 @@ Trang quản lý Banner
             <form action="{{route("admin.banners.index")}}" method="GET" class="row">
                 <div class="form-group col-md">
                     <input type="text" class="form-control form-control-alt" id="dm-ecom-products-search"
-                        name="q" placeholder="Tìm kiếm với tên bài viết" value="{{request()->query("q")}}">
+                        name="q" placeholder="Search with title" value="{{request()->query("q")}}">
                 </div>
                 <div class="form-group col-md">
-                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                    <button class="btn btn-primary" type="submit">Search</button>
                 </div>
             </form>
         </div>
@@ -42,11 +42,11 @@ Trang quản lý Banner
                 <table class="table table-borderless table-striped table-vcenter">
                     <thead>
                         <tr>
-                            <th class="d-none d-sm-table-cell text-center" style="width: 70px">Ảnh Đối tượng</th>
-                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Tiêu đề bài viết</th>
-                            <th style="width: 300px" class="d-none d-md-table-cell text-center">Miêu tả ngắn</th>
-                            <th class="d-none d-md-table-cell text-center">Hình nền</th>
-                            <th class="text-center">Chức năng</th>
+                            <th class="d-none d-sm-table-cell text-center" style="width: 70px">Avatar</th>
+                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Title</th>
+                            <th style="width: 300px" class="d-none d-md-table-cell text-center">Summary</th>
+                            <th class="d-none d-md-table-cell text-center">Background</th>
+                            <th class="text-center"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -86,7 +86,7 @@ Trang quản lý Banner
                         <tr>
                             <td colspan="12">
                                 <div class="alert alert-danger mb-0" role="alert">
-                                    Không tìm thấy dữ liệu
+                                    No value data
                                 </div>
                             </td>
                         </tr>
