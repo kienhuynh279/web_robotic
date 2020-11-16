@@ -22,17 +22,16 @@ class ServiceController extends Controller
 
     public function solution()
     {
-        $solution = Service::where('status', 1)->get();
         $type = Type::where([
             ['status', 1],
             ['Title', 'Solution']
         ])->first();
-        $route = Route::currentRouteName();
+
+        $solution = Service::where('status', 1)->get();
 
         return view('client.pages.service.solution',[
             'solutions' => $solution,
             'type' => $type,
-            'route' => $route
         ]);
     }
 
@@ -42,12 +41,11 @@ class ServiceController extends Controller
             ['status', 1],
             ['Title', 'Training']
         ])->first();
-        $route = Route::currentRouteName();
         $training = Service::where('status', 1)->get();
+
         return view('client.pages.service.traning',[
             'trainings' => $training, 
             'type' => $type,
-            'route' => $route
         ]);
     }
 }
