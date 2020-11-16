@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Trang quản lý loại dịch vụ
+Manage Type Service
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@ Trang quản lý loại dịch vụ
                         <i class="fa fa-plus"></i>
                     </div>
                     <p class="font-w600 font-size-sm text-success text-uppercase mb-0">
-                        Thêm loại dịch vụ
+                        Create Type Service
                     </p>
                 </div>
             </a>
@@ -22,7 +22,7 @@ Trang quản lý loại dịch vụ
     </div>
     <div class="block block-rounded">
         <div class="block-header block-header-default">
-            <h3 class="block-title">Danh sách loại dịch vụ</h3>
+            <h3 class="block-title">List Service</h3>
             <div class="block-options">
                 <!-- Your option -->
                 {{-- <div class="dropdown">
@@ -55,10 +55,10 @@ Trang quản lý loại dịch vụ
             <form action="{{route("admin.type.index")}}" method="GET" class="row">
                 <div class="form-group col-md">
                     <input type="text" class="form-control form-control-alt" id="dm-ecom-products-search"
-                        name="title" placeholder="Tìm kiếm với tên bài viết" value="{{request()->query("title")}}">
+                        name="title" placeholder="Search with title" value="{{request()->query("title")}}">
                 </div>
                 <div class="form-group col-md">
-                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                    <button class="btn btn-primary" type="submit">Search</button>
                 </div>
             </form>
         </div>
@@ -67,10 +67,10 @@ Trang quản lý loại dịch vụ
                 <table class="table table-borderless table-striped table-vcenter">
                     <thead>
                         <tr>
-                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Tên loại dịch vụ</th>
-                            <th class="d-none d-md-table-cell text-center">Ngày tạo</th>
-                            <th class="d-none d-md-table-cell text-center">Cập nhật lúc</th>
-                            <th class="text-center">Chức năng</th>
+                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Title</th>
+                            <th class="d-none d-md-table-cell text-center">Create at</th>
+                            <th class="d-none d-md-table-cell text-center">Update at</th>
+                            <th class="text-center"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -87,12 +87,12 @@ Trang quản lý loại dịch vụ
                                 {{date("d/m/Y H:i:s", strtotime($type->updated_at))}}
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
-                                <span class="badge badge-pill badge-primary">{{$type->Status === 1 ? "Kích hoạt" : "Vô hiệu hóa"}}</span>
+                                <span class="badge badge-pill badge-primary">{{$type->Status === 1 ? "Active" : "Unactive"}}</span>
                             </td>
 
                             <td class="text-center font-size-sm">
                                 
-                                <a title="Chỉnh sửa" class="btn btn-sm btn-alt-secondary" href="{{route("admin.type.edit", $type->TypeId)}}">
+                                <a title="Edit" class="btn btn-sm btn-alt-secondary" href="{{route("admin.type.edit", $type->TypeId)}}">
                                     <i class="fa fa-fw fa-edit"></i>
                                 </a>
 
@@ -100,7 +100,7 @@ Trang quản lý loại dịch vụ
                                     @csrf
                                     @method("DELETE")
                                 </form>
-                                <a title="Xóa" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$type->TypeId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                                <a title="Delete" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$type->TypeId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
                                     <i class="fa fa-fw fa-times text-danger"></i>
                                 </a>
                             </td>
@@ -109,7 +109,7 @@ Trang quản lý loại dịch vụ
                         <tr>
                             <td colspan="12">
                                 <div class="alert alert-danger mb-0" role="alert">
-                                    Không tìm thấy dữ liệu
+                                 No value data
                                 </div>
                             </td>
                         </tr>

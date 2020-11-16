@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Trang tạo dịch vụ
+Create Serve
 @endsection
 
 @section('content')

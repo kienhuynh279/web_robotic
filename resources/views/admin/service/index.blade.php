@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Trang quản lý dịch vụ
+Manager Sevice
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@ Trang quản lý dịch vụ
                         <i class="fa fa-plus"></i>
                     </div>
                     <p class="font-w600 font-size-sm text-success text-uppercase mb-0">
-                        Thêm dịch vụ
+                        Add Sevice
                     </p>
                 </div>
             </a>
@@ -22,7 +22,7 @@ Trang quản lý dịch vụ
     </div>
     <div class="block block-rounded">
         <div class="block-header block-header-default">
-            <h3 class="block-title">Danh sách dịch vụ</h3>
+            <h3 class="block-title">List Sevice</h3>
             <div class="block-options">
                 <!-- Your option -->
                 {{-- <div class="dropdown">
@@ -55,10 +55,10 @@ Trang quản lý dịch vụ
             <form action="{{route("admin.service.index")}}" method="GET" class="row">
                 <div class="form-group col-md">
                     <input type="text" class="form-control form-control-alt" id="dm-ecom-products-search"
-                        name="title" placeholder="Tìm kiếm với tên dịch vụ" value="{{request()->query("title")}}">
+                        name="title" placeholder="Search with title" value="{{request()->query("title")}}">
                 </div>
                 <div class="form-group col-md">
-                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                    <button class="btn btn-primary" type="submit">Search</button>
                 </div>
             </form>
         </div>
@@ -67,12 +67,12 @@ Trang quản lý dịch vụ
                 <table class="table table-borderless table-striped table-vcenter">
                     <thead>
                         <tr>
-                            <th class="d-none d-sm-table-cell text-center" style="width: 70px">Ảnh</th>
-                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Tiêu đề dịch vụ</th>
-                            <th style="width: 300px" class="d-none d-md-table-cell text-center">Loại dịch vụ</th>
-                            <th class="d-none d-md-table-cell text-center">Ngày tạo</th>
-                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Trạng thái</th>
-                            <th class="text-center">Chức năng</th>
+                            <th class="d-none d-sm-table-cell text-center" style="width: 70px">Avatar</th>
+                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Title</th>
+                            <th style="width: 300px" class="d-none d-md-table-cell text-center">Type Service</th>
+                            <th class="d-none d-md-table-cell text-center">Create at</th>
+                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Status</th>
+                            <th class="text-center"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -98,12 +98,12 @@ Trang quản lý dịch vụ
                                 {{date("d/m/Y H:i:s", strtotime($service->created_at))}}
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
-                                <span class="badge badge-pill badge-primary">{{$service->Status === 1 ? "Kích hoạt" : "Vô hiệu hóa"}}</span>
+                                <span class="badge badge-pill badge-primary">{{$service->Status === 1 ? "Acticve" : "Unactive"}}</span>
                             </td>
 
                             <td class="text-center font-size-sm">
                                 
-                                <a title="Chỉnh sửa" class="btn btn-sm btn-alt-secondary" href="{{route("admin.service.edit", $service->ServiceId)}}">
+                                <a title="Edit" class="btn btn-sm btn-alt-secondary" href="{{route("admin.service.edit", $service->ServiceId)}}">
                                     <i class="fa fa-fw fa-edit"></i>
                                 </a>
 
@@ -111,7 +111,7 @@ Trang quản lý dịch vụ
                                     @csrf
                                     @method("DELETE")
                                 </form>
-                                <a title="Xóa" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$service->ServiceId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                                <a title="Delete" onclick="Helpers.confirmSubmit(null,'#action-destroy-{{$service->ServiceId}}')" class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
                                     <i class="fa fa-fw fa-times text-danger"></i>
                                 </a>
                             </td>
@@ -120,7 +120,7 @@ Trang quản lý dịch vụ
                         <tr>
                             <td colspan="12">
                                 <div class="alert alert-danger mb-0" role="alert">
-                                    Không tìm thấy dữ liệu
+                                    No value data
                                 </div>
                             </td>
                         </tr>

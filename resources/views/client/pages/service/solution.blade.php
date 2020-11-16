@@ -14,22 +14,20 @@
          </div>
         
          <div class="row">
-            @foreach($type as $i)
-            {{-- @if($i->Title ===  $route)
-            @dd($i->Title); --}}
+        
             @foreach($solutions as $item)
+            @if($i->Title ===  $route)
                 <div class="col-sm-6 col-md-4">
                     <div class="media services-wrap-detail wow fadeInDown">
                         <div class="pull-left">
-                        <img class="img-responsive" src="{{$item->Image}}">
+                        <img class="img-responsive" src="{{$item->Title == $route ? $item}}">
                         </div>
                         <div class="media-body">
                         <p>{{ $item->Title }}</p>
                         </div>
                     </div>
                 </div>
-            @endforeach
-            {{-- @endif --}}
+            @endif
             @endforeach
          </div><!--/.row-->
      </div><!--/.container-->

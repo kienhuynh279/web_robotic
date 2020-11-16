@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('title')
-Chỉnh sửa loại dịch vụ
+Edit Type Service
 @endsection
 
 @section('content')
