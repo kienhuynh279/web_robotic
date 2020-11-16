@@ -28215,7 +28215,7 @@ var Tools = /*#__PURE__*/function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\laravel\web_robotic\resources\js\dashmix\app.js */"./resources/js/dashmix/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\web_robotic\resources\js\dashmix\app.js */"./resources/js/dashmix/app.js");
 
 
 /***/ })

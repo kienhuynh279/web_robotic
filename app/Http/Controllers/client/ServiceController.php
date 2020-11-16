@@ -25,7 +25,6 @@ class ServiceController extends Controller
         $solution = Service::where('status', 1)->get();
         $type = Type::where('status', 1)->get();
         $route = Route::currentRouteName();
-        //dd($route);
         return view('client.pages.service.solution',[
             'solutions' => $solution,
             'type' => $type,

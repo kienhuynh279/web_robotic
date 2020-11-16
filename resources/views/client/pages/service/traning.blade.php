@@ -14,10 +14,9 @@
         </div>           
 
         <div class="row">
+            
             @foreach($type as $i)
-            {{-- @dd($i->Title) --}}
-            @if($i->Title == $route)
-            @dd($i->Title)
+            @if(strtolower($i->Title) === $route)
             @foreach($tranings as $item)
             <div class="col-md-3 wow fadeInDown">
                 <div class="clients-comments text-center">
@@ -25,6 +24,7 @@
                     <h3>{{$item->Title}}</h3>
                 </div>
             </div>
+            
             @endforeach
             @endif
             @endforeach

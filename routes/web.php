@@ -35,7 +35,7 @@ Route::get('/gallery', 'App\Http\Controllers\Client\GalleryController@index')->n
 Route::get('/about', 'App\Http\Controllers\Client\AboutController@index')->name('about');
 Route::get('/contact', 'App\Http\Controllers\Client\ContactController@index')->name('contact');
 Route::get('/solution', 'App\Http\Controllers\Client\ServiceController@solution')->name('solution');
-Route::get('/traning', 'App\Http\Controllers\Client\ServiceController@traning')->name('traning');
+Route::get('/training', 'App\Http\Controllers\Client\ServiceController@traning')->name('traning');
 
 Route::get("/login", [AuthController::class, "login"],)->name("auth.login")->middleware("guest");
 Route::post("/login", [AuthController::class, "handle_login"])->name("auth.handle_login")->middleware("guest");
