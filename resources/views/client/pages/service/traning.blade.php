@@ -24,7 +24,8 @@
                     <h3>{{$item->Title}}</h3>
                 </div>
             </div>
-            @endif  
+            @endif
+            
             @endforeach
        </div>
 
