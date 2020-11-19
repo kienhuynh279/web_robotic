@@ -25,17 +25,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Client routes
-Route::get('/', 'App\Http\Controllers\Client\HomeController@index')->name('home');
-Route::get('/docs', 'App\Http\Controllers\Client\DocsController@index')->name('docs');
-Route::get('/news', 'App\Http\Controllers\Client\NewsController@index')->name('news');
-Route::get('/detail-news/{id}', 'App\Http\Controllers\Client\NewsController@detail')->name('detailNew');
-Route::get('/product', 'App\Http\Controllers\Client\ProductController@index')->name("product");
-Route::get('/product/{id}', 'App\Http\Controllers\Client\ProductController@detail')->name("productDetail");
-Route::get('/gallery', 'App\Http\Controllers\Client\GalleryController@index')->name('gallery');
-Route::get('/about', 'App\Http\Controllers\Client\AboutController@index')->name('about');
-Route::get('/contact', 'App\Http\Controllers\Client\ContactController@index')->name('contact');
-Route::get('/solution', 'App\Http\Controllers\Client\ServiceController@solution')->name('solution');
-Route::get('/training', 'App\Http\Controllers\Client\ServiceController@traning')->name('traning');
+Route::get('/', 'App\Http\Controllers\client\HomeController@index')->name('home');
+Route::get('/docs', 'App\Http\Controllers\client\DocsController@index')->name('docs');
+Route::get('/news', 'App\Http\Controllers\client\NewsController@index')->name('news');
+Route::get('/detail-news/{id}', 'App\Http\Controllers\client\NewsController@detail')->name('detailNew');
+Route::get('/product', 'App\Http\Controllers\client\ProductController@index')->name("product");
+Route::get('/product/{id}', 'App\Http\Controllers\client\ProductController@detail')->name("productDetail");
+Route::get('/gallery', 'App\Http\Controllers\client\GalleryController@index')->name('gallery');
+Route::get('/about', 'App\Http\Controllers\client\AboutController@index')->name('about');
+Route::get('/contact', 'App\Http\Controllers\client\ContactController@index')->name('contact');
+Route::get('/solution', 'App\Http\Controllers\client\ServiceController@solution')->name('solution');
+Route::get('/training', 'App\Http\Controllers\client\ServiceController@traning')->name('traning');
 
 Route::get("/login", [AuthController::class, "login"],)->name("auth.login")->middleware("guest");
 Route::post("/login", [AuthController::class, "handle_login"])->name("auth.handle_login")->middleware("guest");
