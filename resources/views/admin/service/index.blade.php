@@ -70,8 +70,8 @@ Manager Sevice
                             <th class="d-none d-sm-table-cell text-center" style="width: 70px">Avatar</th>
                             <th style="width: 200px" class="d-none d-sm-table-cell text-center">Title</th>
                             <th style="width: 300px" class="d-none d-md-table-cell text-center">Type Service</th>
-                            <th class="d-none d-md-table-cell text-center">Create at</th>
-                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Status</th>
+                            {{-- <th class="d-none d-md-table-cell text-center">Create at</th>
+                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Status</th> --}}
                             <th class="text-center"></th>
                         </tr>
                     </thead>
@@ -94,12 +94,12 @@ Manager Sevice
                                     @break
                                 @endif
                             @endforeach
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">
+                            {{-- <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 {{date("d/m/Y H:i:s", strtotime($service->created_at))}}
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 <span class="badge badge-pill badge-primary">{{$service->Status === 1 ? "Acticve" : "Unactive"}}</span>
-                            </td>
+                            </td> --}}
 
                             <td class="text-center font-size-sm">
                                 

@@ -68,8 +68,8 @@ Manage Type Service
                     <thead>
                         <tr>
                             <th style="width: 200px" class="d-none d-sm-table-cell text-center">Title</th>
-                            <th class="d-none d-md-table-cell text-center">Create at</th>
-                            <th class="d-none d-md-table-cell text-center">Update at</th>
+                            {{-- <th class="d-none d-md-table-cell text-center">Create at</th>
+                            <th class="d-none d-md-table-cell text-center">Update at</th> --}}
                             <th class="text-center"></th>
                         </tr>
                     </thead>
@@ -80,7 +80,7 @@ Manage Type Service
                                 <a class="font-w600" href="#">{{$type->Title}}</a>
                             </td>
 
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">
+                            {{-- <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 {{date("d/m/Y H:i:s", strtotime($type->created_at))}}
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
@@ -88,7 +88,7 @@ Manage Type Service
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 <span class="badge badge-pill badge-primary">{{$type->Status === 1 ? "Active" : "Unactive"}}</span>
-                            </td>
+                            </td> --}}
 
                             <td class="text-center font-size-sm">
                                 

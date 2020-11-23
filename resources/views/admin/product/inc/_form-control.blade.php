@@ -1,5 +1,5 @@
 <x-wp-layout>
-    @slot('sidebar')
+    {{-- @slot('sidebar')
     <div id="settings-accordion" role="tablist" aria-multiselectable="true">
         <div class="block mb-0">
             <div class="block-header block-header-default p-0" role="tab" id="settings-accordion_h1">
@@ -22,22 +22,25 @@
             </div>
         </div>
     </div>
-    @endslot
+    @endslot --}}
 
     @slot('slot')
+    <div class="form-group">
+        <button class="btn btn-outline-primary">Save Change</button>
+    </div>
     <div class="form-row">
         <x-input-form type="text" label="Title" name="Title" classGroup="col-md" class="" placeholder="Title"
             :value="$product->Title ?? ''" />
     </div>
 
-    <div class="form-group">
+    {{-- <div class="form-group">
         <label for="example-select">Select Product Type</label>
             <select class="form-control" id="example-select" name="CategoryId">
                 @foreach ($category as $cate)
                     <option value="{{ $cate->CategoryId }}"> {{ $cate->Title }}</option>
                 @endforeach
             </select>
-    </div>
+    </div> --}}
 
     <div class="form-group">
         <label for="">Avatar</label>
@@ -52,19 +55,6 @@
         @error('Image')
             <small class="text-danger">{{$message}}</small>
         @enderror
-    </div>
-
-    <div class="form-group">
-        <label for="editor" class="@error("Specification") text-danger @enderror">Specifications</label>
-        <textarea id="editor" class="form-control" name="Specification" rows="3">{{!old("Specification") ? $product->Specification ?? false ? $product->Specification : old("Specification") : old("Specification") }}</textarea>
-    </div>
-    <div class="form-group">
-        <label for="editor" class="@error("Dimension") text-danger @enderror">Dimensions</label>
-        <textarea id="editor" class="form-control" name="Dimension" rows="3">{{!old("Description") ? $product->Dimension ?? false ? $product->Dimension : old("Dimension") : old("Dimension") }}</textarea>
-    </div>
-    <div class="form-group">
-        <label for="editor" class="@error("Application") text-danger @enderror">Application</label>
-        <textarea id="editor" class="form-control" name="Application" rows="3">{{!old("Application") ? $product->Application ?? false ? $product->Application : old("Application") : old("Application") }}</textarea>
     </div>
 
     <div class="form-group">

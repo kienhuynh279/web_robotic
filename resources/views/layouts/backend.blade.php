@@ -18,15 +18,15 @@
     }
 
     $modules = [
-        module(
-            "Dashboard",
-            'admin/dashboard/*',
-            "dashboard",
-            "fa fa-edit",
-            [],
-            "Dashboard",
-            true
-        ),
+        // module(
+        //     "Dashboard",
+        //     'admin/dashboard/*',
+        //     "dashboard",
+        //     "fa fa-edit",
+        //     [],
+        //     "Dashboard",
+        //     true
+        // ),
         module(
             "Manage Account",
             'admin/users',
@@ -91,38 +91,38 @@
             "",
             true
         ),
-        module(
-            "Manage Category Product",
-            'admin/categories',
-            "#",
-            "fa fa-bookmark",
-            [
-                module(
-                    "List Category",
-                    'admin/users/',
-                    route("admin.categories.index"),
-                    "fa fa-list",
-                    [
+        // module(
+        //     "Manage Category Product",
+        //     'admin/categories',
+        //     "#",
+        //     "fa fa-bookmark",
+        //     [
+        //         module(
+        //             "List Category",
+        //             'admin/users/',
+        //             route("admin.categories.index"),
+        //             "fa fa-list",
+        //             [
                         
-                    ] ,
-                    null,
-                    true
-                ),
-                module(
-                    "Add Category",
-                    'admin/accounts/users',
-                    route("admin.categories.create"),
-                    "fa fa-edit",
-                    [
+        //             ] ,
+        //             null,
+        //             true
+        //         ),
+        //         module(
+        //             "Add Category",
+        //             'admin/accounts/users',
+        //             route("admin.categories.create"),
+        //             "fa fa-edit",
+        //             [
                         
-                    ] ,
-                    null,
-                    true
-                ),
-            ],
-            "",
-            true
-        ),
+        //             ] ,
+        //             null,
+        //             true
+        //         ),
+        //     ],
+        //     "",
+        //     true
+        // ),
 
         module(
             "Manage Application",
@@ -351,7 +351,7 @@
                     true
                 ),
             ],
-            "System",
+            "",
             true
         ),
     ];
@@ -600,10 +600,10 @@
                     <!-- Logo -->
                     <a class="font-w600 text-white tracking-wide" href="/">
                         <span class="smini-visible">
-                            D<span class="opacity-75">x</span>
+                            <span class="opacity-75"></span>
                         </span>
                         <span class="smini-hidden">
-                            Laravel<span class="opacity-75">Kit</span>
+                            ARAR<span class="opacity-75"></span>
                         </span>
                     </a>
                     <!-- END Logo -->
@@ -805,7 +805,7 @@
                 <!-- Right Section -->
                 <div>
                     <!-- Notifications Dropdown -->
-                    <div class="dropdown d-inline-block">
+                    {{-- <div class="dropdown d-inline-block">
                         <button type="button" class="btn btn-dual" id="page-header-notifications-dropdown"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-fw fa-bell"></i>
@@ -880,7 +880,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- END Notifications Dropdown -->
 
                     {{-- API Toggle Side bar data-toggle="layout" data-action="side_overlay_toggle" --}}
@@ -896,12 +896,12 @@
                                     Guest
                                 @endauth
                             </span>
-                            <span class="badge badge-pill badge-warning ml-1">.genius</span>
+                          
                         </button>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg p-0" aria-labelledby="page-header-user-dropdown" style="">
                             <div class="rounded-top font-w600 text-white text-center bg-image" style="background-image: url('{{asset('media/photos/photo13.jpg')}}');">
                                 <div class="p-3">
-                                    <img class="img-avatar img-avatar-thumb" src="{{Auth::check() ? Auth::user()->avatar : asset('media/avatars/avatar1.jpg')}}" alt="">
+                                    {{-- <img class="img-avatar img-avatar-thumb" src="{{Auth::check() ? Auth::user()->avatar : asset('media/avatars/avatar1.jpg')}}" alt=""> --}}
                                 </div>
                                 <div class="p-3 bg-black-75">
                                     <a class="text-white font-w600" href="be_pages_generic_profile.html">
@@ -921,7 +921,7 @@
                                 </div>
                             </div>
                             <div class="p-2">
-                                <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                                {{-- <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
                                     Profile
                                     <i class="fa fa-fw fa-user text-black-50 ml-1"></i>
                                 </a>
@@ -948,7 +948,7 @@
                                     Settings
                                     <i class="fa fa-fw fa-cog text-black-50 ml-1"></i>
                                 </a>
-                                <div role="separator" class="dropdown-divider"></div>
+                                <div role="separator" class="dropdown-divider"></div> --}}
                                 
                                 <!-- Logout -->
                                 <form id="logout-js" action="{{route("auth.handle_logout")}}" method="POST"> {{-- route("auth.handle_logout") --}}
@@ -1011,7 +1011,7 @@
         <!-- END Main Container -->
 
         <!-- Footer -->
-        <footer id="page-footer" class="bg-body-light">
+        {{-- <footer id="page-footer" class="bg-body-light">
             <div class="content py-0">
                 <div class="row font-size-sm">
                     <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-right">
@@ -1024,7 +1024,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> --}}
         <!-- END Footer -->
     </div>
     <!-- END Page Container -->

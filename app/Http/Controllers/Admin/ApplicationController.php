@@ -53,7 +53,9 @@ class ApplicationController extends Controller
 
         Application::create([
             "Title" => $request->get("Title"),
-            "Image" => $request->get("Image"),
+            // "Image" => $request->get("Image"),
+            "Icon" => $request->get("Icon"),
+            "Color" => $request->get("Color"),
             "Description" => $request->get("Description"),
             "Status" => 1,
         ]);
@@ -103,7 +105,9 @@ class ApplicationController extends Controller
         $request->validated();
 
         $application->Title = $request->get("Title");
-        $application->Image = $request->get("Image");
+        // $application->Image = $request->get("Image");
+        $application->Icon = $request->get("Icon");
+        $application->Color = $request->get("Color");
         $application->Description = $request->get("Description");
         $application->Status = 1;
         $application->save();

@@ -70,8 +70,7 @@ Trang quản lý tin tức
                             <th class="d-none d-sm-table-cell text-center" style="width: 70px">Avatar</th>
                             <th style="width: 200px" class="d-none d-sm-table-cell text-center">Title</th>
                             <th style="width: 300px" class="d-none d-md-table-cell text-center">Summary</th>
-                            <th class="d-none d-md-table-cell text-center">Create at</th>
-                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Status</th>
+                            {{-- <th class="d-none d-md-table-cell text-center">Create at</th> --}}
                             <th class="text-center"></th>
                         </tr>
                     </thead>
@@ -88,13 +87,13 @@ Trang quản lý tin tức
                                 <a class="font-w600" href="#">{{$applicationItem->Title}}</a>
                             </td>
 
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">{{substr($applicationItem->Description,0, 300)}}</td>
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">
+                            <td class="d-none d-sm-table-cell text-center font-size-sm">{!!substr($applicationItem->Description,0, 100)!!}</td>
+                            {{-- <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 {{date("d/m/Y H:i:s", strtotime($applicationItem->created_at))}}
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 <span class="badge badge-pill badge-primary">{{$applicationItem->Status === 1 ? "Active" : "Unactive"}}</span>
-                            </td>
+                            </td> --}}
 
                             <td class="text-center font-size-sm">
                                 

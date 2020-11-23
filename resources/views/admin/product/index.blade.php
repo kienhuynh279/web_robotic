@@ -69,9 +69,9 @@ Trang quản lý sản phẩm
                         <tr>
                             <th class="d-none d-sm-table-cell text-center" style="width: 70px">Ảnh</th>
                             <th style="width: 200px" class="d-none d-sm-table-cell text-center">Tiêu đề sản phẩm</th>
-                            <th style="width: 300px" class="d-none d-md-table-cell text-center">Loại sản phẩm</th>
-                            <th class="d-none d-md-table-cell text-center">Ngày tạo</th>
-                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Trạng thái</th>
+                            {{-- <th style="width: 300px" class="d-none d-md-table-cell text-center">Loại sản phẩm</th> --}}
+                            {{-- <th class="d-none d-md-table-cell text-center">Ngày tạo</th>
+                            <th style="width: 100px" class="d-none d-md-table-cell text-center">Trạng thái</th> --}}
                             <th class="text-center">Chức năng</th>
                         </tr>
                     </thead>
@@ -87,18 +87,18 @@ Trang quản lý sản phẩm
                             <td class="d-none d-md-table-cell text-center font-size-sm">
                                 <a class="font-w600" href="#">{{$product->Title}}</a>
                             </td>
-                            @foreach ($cate as $item)
+                            {{-- @foreach ($cate as $item)
                                 @if ($product->CategoryId === $item->CategoryId)
                                     <td class="d-none d-sm-table-cell text-center font-size-sm">{{ $item->Title }}</td>
                                     @break
                                 @endif
-                            @endforeach
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">
+                            @endforeach --}}
+                            {{-- <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 {{date("d/m/Y H:i:s", strtotime($product->created_at))}}
                             </td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 <span class="badge badge-pill badge-primary">{{$product->Status === 1 ? "Kích hoạt" : "Vô hiệu hóa"}}</span>
-                            </td>
+                            </td> --}}
 
                             <td class="text-center font-size-sm">
                                 

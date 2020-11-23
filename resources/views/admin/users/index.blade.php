@@ -75,7 +75,7 @@ Manage Account
                             <th class="d-none d-sm-table-cell text-center">Full Name</th>
                             <th class="d-none d-md-table-cell text-center">Account</th>
                             <th class="d-none d-md-table-cell text-center">Gender</th>
-                            <th class="d-none d-md-table-cell text-center">Status</th>
+                            {{-- <th class="d-none d-md-table-cell text-center">Status</th> --}}
                             <th class="text-center"></th>
                         </tr>
                     </thead>
@@ -105,9 +105,9 @@ Manage Account
                                     Unclear
                                 @endif
                             </td>
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">
+                            {{-- <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 <span class="badge badge-pill badge-primary">{{isset($user->Status) && $user->Status === 1 ? "Active" : "Unactive"}}</span>
-                            </td>
+                            </td> --}}
 
                             <td class="text-center font-size-sm">
                                 {{-- <a title="Xem" class="btn btn-sm btn-alt-secondary" href="{{route("admin.users.show", $user->UserId)}}">
