@@ -17,18 +17,10 @@ Trang sản phẩm
             <h1 class="text-center" style="color: black">{{$product->Title}}</h1>
 
             <div class="row mx-0" style="margin-bottom: 50px">
+                <div class="col-md-4 pl-0"></div>
                 <div class="col-md-4 pl-0">
                     <img class="w-100" height="400" style="width:100%; object-fit: cover"
                             src="{{$product->Image}}" alt="">
-                </div>
-                <div class="col-md-3">
-                    {!!$product->Specification!!}
-                </div>
-                <div class="col-md-3">
-                    {!!$product->Dimension!!}
-                </div>
-                <div class="col-md-2">
-                    {!!$product->Application!!}
                 </div>
             </div>
             <div class="row mx-0" style="margin-bottom: 50px">

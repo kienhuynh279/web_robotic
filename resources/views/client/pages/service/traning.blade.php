@@ -9,7 +9,7 @@
 <section id="feature" class="transparent-bg">
     <div class="container">
        <div class="center wow fadeInDown">
-            <h2>TRAINING</h2>
+            <h2 style="padding-top: 40px">TRAINING</h2>
             
         </div>           
 
