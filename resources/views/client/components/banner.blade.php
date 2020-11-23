@@ -26,8 +26,10 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
+                                    @if (!isset($banner->Video))
                                     <h1 class="animation animated-item-1">{{$banner->Title}}</h1>
                                     <h2 class="animation animated-item-2">{{$banner->Description}}</h2>
+                                    @endif
                                     {{-- <a class="btn-slide animation animated-item-3" href="{{$banner->Link}}">Read More</a> --}}
                                 </div>
                             </div>
