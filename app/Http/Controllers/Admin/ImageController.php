@@ -114,8 +114,12 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Image $image)
+    public function destroy($id)
     {
-        //
+        Image::findOrFail($id)->delete();
+
+        return redirect()->route("admin.image.index")->withErrors([
+            "success" => "Xóa thành công"
+        ]);
     }
 }

@@ -24,7 +24,7 @@
                             <div class="form-group">
                                 <input type="text"
                                     class="form-control form-control-alt @error('email') is-invalid @enderror"
-                                    id="login-email" name="email" placeholder="Email" value="{{old('email') ?? "test@gmail.com"}}">
+                                    id="login-email" name="email" placeholder="Email" value="{{old('email')}}">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -34,7 +34,7 @@
                             <div class="form-group">
                                 <input type="password"
                                     class="form-control form-control-alt @error('password') is-invalid @enderror"
-                                    id="login-password" name="password" placeholder="Password" value="{{old('password') ?? "123Qweasdzxc"}}">
+                                    id="login-password" name="password" placeholder="Password" value="{{old('password')}}">
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

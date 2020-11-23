@@ -64,7 +64,9 @@ Trang quản lý Banner
 
                             <td class="d-none d-sm-table-cell text-center font-size-sm">{!!substr($bannersItem->Description,0, 300)!!}</td>
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
+                                @if (isset($bannersItem->Background))
                                 <img id="avt-{{$bannersItem->BannerId}}" onerror='document.querySelector("#avt-{{$bannersItem->BannerId}}") src= "/media/avatars/avatar1.jpg"' style="width: 100%; height: 60px; object-fit:cover" class="rounded" src="{{$bannersItem->Background}}">
+                                @endif
                             </td>
 
                             <td class="text-center font-size-sm">
