@@ -28,7 +28,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">{{$banner->Title}}</h1>
                                     <h2 class="animation animated-item-2">{{$banner->Description}}</h2>
-                                    <a class="btn-slide animation animated-item-3" href="{{$banner->Link}}">Read More</a>
+                                    {{-- <a class="btn-slide animation animated-item-3" href="{{$banner->Link}}">Read More</a> --}}
                                 </div>
                             </div>
 
