@@ -35,9 +35,9 @@
 
     <div class="form-row">
         <x-input-form type="text" label="Icon" name="Icon" classGroup="col-md-6" class="" placeholder="Icon"
-            :value="$application->Title ?? ''" />
-        <x-input-form type="text" label="Color" name="Color" classGroup="col-md-6" class="" placeholder="Color"
-            :value="$application->Title ?? ''" />
+            :value="$application->Icon ?? ''" />
+        <x-input-form type="color" label="Color" name="Color" classGroup="col-md-6" class="" placeholder="Color"
+            :value="$application->Color ?? ''" />
     </div>
 
     {{-- <div class="form-group">

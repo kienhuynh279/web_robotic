@@ -26,7 +26,8 @@ class ApplicationRequest extends FormRequest
         return [
             "Title" => "required",
             "Description" => "required",
-            "Image" => "required"
+            "Icon" => "required",
+            "Color" => "required"
         ];
     }
 }

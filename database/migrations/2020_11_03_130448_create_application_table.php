@@ -16,7 +16,8 @@ class CreateApplicationTable extends Migration
         Schema::create('application', function (Blueprint $table) {
             $table->increments('ApplicationId');
             $table->string('Title');
-            $table->text('Image');
+            $table->text('Icon')->nullable();
+            $table->text('Color')->nullable()->default("#000000");
             $table->text('Description')->nullable()->default(null);
             $table->timestamps();   
             $table->tinyInteger('Status')->default('1');

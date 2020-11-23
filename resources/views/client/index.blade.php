@@ -20,8 +20,8 @@
                     @forelse ($applications as $app)
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-							{{-- <i class='fa fa-heartbeat' style='color:red'></i> --}}
-                            <img src="{{$app->Image}}" style="width: 200px; height: 200px; object-fit: cover; object-position: center; border-radius: 50%;" alt="">
+							<i class='{{$app->Icon ?? "fa fa-globe"}}' style='color:{{$app->Color ?? "#000000"}}'></i>
+                            {{-- <img src="{{$app->Image}}" style="width: 200px; height: 200px; object-fit: cover; object-position: center; border-radius: 50%;" alt=""> --}}
                             <h2>{{$app->Title}}</h2>
                             <p>{!!$app->Description!!}</p>
                         </div>

@@ -14,7 +14,8 @@ class Application extends Model
     [
          'Title',
          'Description',
-         'Image',
+         'Icon',
+         'Color',
          'Status'
     ];
 }
