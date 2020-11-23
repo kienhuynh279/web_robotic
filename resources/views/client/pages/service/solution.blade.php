@@ -8,7 +8,7 @@ Solution
 <section id="services-detail" class="service-item">
     <div class="container">
         <div class="center wow fadeInDown">
-            <h2>SOLUTIONS</h2>
+            <h2 style="padding-top: 40px">SOLUTIONS</h2>
 
         </div>
         <div class="row">

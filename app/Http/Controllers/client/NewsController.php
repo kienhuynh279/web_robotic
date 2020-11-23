@@ -18,11 +18,13 @@ class NewsController extends Controller
     }
 
     public function detail($id) {
+        $all = News::all();
         
         $news = News::findOrFail($id);
         
         return view("client.pages.news.detail",[
-            'news' => $news
+            'news' => $news,
+            'all' => $all
         ]);
     }
 }

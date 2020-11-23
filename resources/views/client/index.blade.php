@@ -10,8 +10,7 @@
     <section id="feature" >
         <div class="container">
            <div class="center wow fadeInDown">
-                <h2>ARAR’S FAMILY OF AUTONOMOUS MOBILE ROBOTS (ARARBOT) WORK IN</h2>
-                <p class="lead">------</p>
+                <h2 style="padding-top: 40px">ARAR’S FAMILY OF AUTONOMOUS MOBILE ROBOTS (ARARBOT) WORK IN</h2>
             </div>				
 				
             <div class="row">			
@@ -20,7 +19,8 @@
                     @forelse ($applications as $app)
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-							<i class='{{$app->Icon ?? "fa fa-globe"}}' style='color:{{$app->Color ?? "#000000"}}'></i>
+                        <i class='{{$app->Icon ?? "fa fa-globe"}}' style='color:{{$app->Color ?? "#000000"}}'></i>
+                        {{-- <i class='{{$app->Icon}}' style='color:{{$app->Color}}'></i> --}}
                             {{-- <img src="{{$app->Image}}" style="width: 200px; height: 200px; object-fit: cover; object-position: center; border-radius: 50%;" alt=""> --}}
                             <h2>{{$app->Title}}</h2>
                             <p>{!!$app->Description!!}</p>
@@ -39,8 +39,7 @@
     <section id="services" class="service-item">
 	   <div class="container">
             <div class="center wow fadeInDown">
-                <h2>WORKING SCENARIOS</h2>
-                <p class="lead">---------------</p>
+                <h2 style="padding-top: 40px">WORKING SCENARIOS</h2>
             </div>
 
             <div class="row">
