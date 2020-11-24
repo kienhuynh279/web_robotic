@@ -87,7 +87,7 @@ Manager Sevice
                             <td class="d-none d-md-table-cell text-center font-size-sm">
                                 <a class="font-w600" href="#">{{$service->Title}}</a>
                             </td>
-                            <td class="d-none d-sm-table-cell text-center font-size-sm">{{ $service->TypeId === 1 ?  "Solution" : "Training"  }}</td>
+                            <td class="d-none d-sm-table-cell text-center font-size-sm">{{intval( $service->TypeId) === 1 ?  "Solution" : "Training"  }}</td>
                              {{-- @foreach ($type as $item)
                                 @if ($service->TypeId === $item->TypeId)
                                     <td class="d-none d-sm-table-cell text-center font-size-sm">{{ $item->Title }}</td>

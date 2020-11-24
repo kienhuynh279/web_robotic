@@ -17,7 +17,7 @@ Solution
                 <div class="col-sm-6 col-md-4">
                     <div class="media services-wrap-detail wow fadeInDown">
                         <div class="pull-left">
-                            <img class="img-responsive" src="{{$item->Image}}">
+                            <img class="img-responsive" style="object-fit: cover; object-position: center" src="{{$item->Image}}">
                         </div>
                         <div class="media-body">
                             <p>{{ $item->Title }}</p>
