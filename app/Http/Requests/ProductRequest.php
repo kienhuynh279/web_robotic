@@ -24,12 +24,8 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'CategoryId' => "required",
             "Title" => "required",
-            "Image" => "required",
-            "Specification" => "required",
-            "Dimension" => "required",
-            "Application" => "required"
+            "Description" => "required"
         ];
     }
 }

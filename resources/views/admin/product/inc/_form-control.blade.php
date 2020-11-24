@@ -42,7 +42,7 @@
             </select>
     </div> --}}
 
-    <div class="form-group">
+    {{-- <div class="form-group">
         <label for="">Avatar</label>
         <div class="input-group">
             <input type="text" class="form-control @error("Image") is-invalid @enderror" id="Image" name="Image"
@@ -55,7 +55,7 @@
         @error('Image')
             <small class="text-danger">{{$message}}</small>
         @enderror
-    </div>
+    </div> --}}
 
     <div class="form-group">
         <label for="editor" class="@error("Application") text-danger @enderror">Description</label>

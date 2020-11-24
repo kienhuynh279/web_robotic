@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             "Name" => "Test",
             "Password" => '$2y$10$GYLDDxPjjQdexe1TJRFMZO3stafJWhVIvQE0BgjyZthB2QOgg9P42',
             "Gender" => 0,
-            "Email" => "test@gmail.com"
+            "Email" => "admin@gmail.com"
         ]);
     }
 }

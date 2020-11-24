@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Models\Product;
-use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -24,12 +23,10 @@ class ProductController extends Controller
                 "Title", "like", "%".$request->get("title")."%"
             ]);
         }
-        $category = Category::all();
         $product = Product::where($filter)->paginate(20);
 
         return view("admin.product.index")->with([
             "product" => $product,
-            "cate" => $category
         ]);
     }
 
@@ -40,9 +37,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $category = Category::all();
         return view("admin.product.create",[
-            "category" => $category
         ]);
     }
 
@@ -91,12 +86,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::all();
         $product = Product::findOrFail($id);
 
         return view("admin.product.edit")->with([
             "product" => $product,
-            "category" => $category
         ]);
     }
 
