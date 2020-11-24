@@ -12,13 +12,10 @@ class Product extends Model
     protected $guarded = [];
     protected $fillable =
     [
-        // 'CategoryId',
+
          'Title',
-        //  'Image',
-        //  'Specification',
-        //  'Dimension',
-        //  'Application',
+     
          'Description',
-        //  'Status'
+
     ];
 }
