@@ -17,15 +17,12 @@
             
             @foreach($trainings as $item)
 
-            @if($type->TypeId === $item->TypeId)
             <div class="col-md-3 wow fadeInDown">
                 <div class="clients-comments text-center">
                     <img src="{{ $item->Image }}"  alt="">
                     <h3>{{$item->Title}}</h3>
                 </div>
             </div>
-            @endif
-            
             @endforeach
        </div>
 

@@ -13,7 +13,6 @@ Solution
         </div>
         <div class="row">
             @foreach ($solutions as $item)
-                @if ($item->TypeId === $type->TypeId)
 
                 <div class="col-sm-6 col-md-4">
                     <div class="media services-wrap-detail wow fadeInDown">
@@ -26,7 +25,6 @@ Solution
                     </div>
                 </div>
                     
-                @endif
             @endforeach
         </div>
         <!--/.row-->

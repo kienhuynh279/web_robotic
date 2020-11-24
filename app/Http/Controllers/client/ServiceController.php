@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Service;
-use App\Models\Type;
 use Illuminate\Support\Facades\Route;
 
 class ServiceController extends Controller
@@ -22,30 +21,19 @@ class ServiceController extends Controller
 
     public function solution()
     {
-        $type = Type::where([
-            ['status', 1],
-            ['Title', 'Solution']
-        ])->first();
+        $solution = Service::where([['status', "=", 1], ["TypeId", "=", 1]])->get();
 
-        $solution = Service::where('status', 1)->get();
-
-        return view('client.pages.service.solution',[
+        return view('client.pages.service.solution', [
             'solutions' => $solution,
-            'type' => $type,
         ]);
     }
 
     public function traning()
-    {   
-        $type = Type::where([
-            ['status', 1],
-            ['Title', 'Training']
-        ])->first();
-        $training = Service::where('status', 1)->get();
+    {
+        $training = Service::where([['status', "=", 1], ["TypeId", "=", 2]])->get();
 
-        return view('client.pages.service.traning',[
-            'trainings' => $training, 
-            'type' => $type,
+        return view('client.pages.service.traning', [
+            'trainings' => $training,
         ]);
     }
 }

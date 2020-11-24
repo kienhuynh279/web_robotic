@@ -19,8 +19,8 @@ class Service extends Model
          'Status'
     ];
 
-    public function Type()
-    {
-        return $this->belongsTo('App\Models\Type','TypeId', 'TypeId');
-    }
+    // public function Type()
+    // {
+    //     return $this->belongsTo('App\Models\Type','TypeId', 'TypeId');
+    // }
 }
