@@ -19,18 +19,17 @@ class ServiceController extends Controller
     {
         $filter = [];
 
-        if($request->has("title")) {
+        if ($request->has("title")) {
             array_push($filter, [
                 "Title", "like", "%".$request->get("title")."%"
             ]);
         }
-        $type = Type::all();
 
         $service = Service::where($filter)->paginate(20);
 
         return view("admin.service.index")->with([
             "service" => $service,
-            "type" => $type
+        
         ]);
     }
 

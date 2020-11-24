@@ -35,10 +35,10 @@
 
     <div class="form-group">
         <label for="example-select">Choose The Type of Service</label>
-            <select class="form-control" id="example-select" name="TypeId">
-                @foreach ($type as $type)
-                    <option value="{{ $type->TypeId }}"> {{ $type->Title }}</option>
-                @endforeach
+            <select class="form-control" id="example-select" name="">
+              
+                    <option value="1">Solution</option>
+                    <option value="2">Training</option>
             </select>
     </div>
 
