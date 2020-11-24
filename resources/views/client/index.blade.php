@@ -89,7 +89,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 wow fadeInDown">
-				<img class="img-responsive" src="{{ asset('assets/client/images/techmetics-advantage_.png') }}">
+				<img class="img-responsive" src="{{ asset('assets/client/images/home_product.png') }}">
                   </div>
 
             </div><!--/.row-->

@@ -42,7 +42,7 @@ Trang tài liệu
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="single_comments">
-                                <img height="90px" src="{{ $i->Image }}" alt="" />
+                                <img width="90px" src="{{ $i->Image }}" alt="" />
                                 <p>{{$i->Title}} </p>
                                 <div class="entry-meta small muted">
                                   

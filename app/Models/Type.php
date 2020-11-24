@@ -12,8 +12,8 @@ class Type extends Model
     protected $guarded = [];
     protected $fillable =
     [
-         'Title',
-         'Status'
+        'Title',
+        'Status'
     ];
 
     public function Service()

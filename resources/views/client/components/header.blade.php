@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{ route('home') }}"><img
-                        src="{{ asset('assets/client/images/logo_.png') }}" alt="logo"></a>
+                        src="{{ asset('assets/client/images/logo_.ico') }}" alt="logo"></a>
             </div>
 
             <div class="collapse navbar-collapse navbar-right">
@@ -61,6 +61,7 @@
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Services <i
                                 class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
+                            
                             <li><a href="{{ route('solution') }}">Solutions</a></li>
                             <li><a href="{{ route('traning') }}">Training</a></li>
                         </ul>
@@ -71,8 +72,8 @@
                                 class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('news') }}">News</a></li>
-                            <li><a href="{{ route('gallery') }}">GALLERY</a></li>
-                            <li><a href="{{ route('news') }}">DOCUMENTS</a></li>
+                            {{-- <li><a href="{{ route('gallery') }}">GALLERY</a></li> --}}
+                            {{-- <li><a href="{{ route('news') }}">DOCUMENTS</a></li> --}}
                         </ul>
                     </li>
 

@@ -12,14 +12,14 @@ class Product extends Model
     protected $guarded = [];
     protected $fillable =
     [
-        'CategoryId',
+        // 'CategoryId',
          'Title',
-         'Image',
-         'Specification',
-         'Dimension',
-         'Application',
+        //  'Image',
+        //  'Specification',
+        //  'Dimension',
+        //  'Application',
          'Description',
-         'Status'
+        //  'Status'
     ];
 
     public function Category()

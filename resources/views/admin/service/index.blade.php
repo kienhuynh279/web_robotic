@@ -68,8 +68,8 @@ Manager Sevice
                     <thead>
                         <tr>
                             <th class="d-none d-sm-table-cell text-center" style="width: 70px">Avatar</th>
-                            <th style="width: 200px" class="d-none d-sm-table-cell text-center">Title</th>
-                            <th style="width: 300px" class="d-none d-md-table-cell text-center">Type Service</th>
+                            <th style="width: 650px" class="d-none d-sm-table-cell text-center">Title</th>
+                            <th style="width: 150px" class="d-none d-md-table-cell text-center">Type Service</th>
                             {{-- <th class="d-none d-md-table-cell text-center">Create at</th>
                             <th style="width: 100px" class="d-none d-md-table-cell text-center">Status</th> --}}
                             <th class="text-center"></th>
@@ -100,6 +100,9 @@ Manager Sevice
                             <td class="d-none d-sm-table-cell text-center font-size-sm">
                                 <span class="badge badge-pill badge-primary">{{$service->Status === 1 ? "Acticve" : "Unactive"}}</span>
                             </td> --}}
+                            <td class="text-center font-size-sm">
+
+                            </td>
 
                             <td class="text-center font-size-sm">
                                 
