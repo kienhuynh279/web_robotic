@@ -53,13 +53,13 @@ class ProductController extends Controller
 
         Product::create([
             "Title" => $request->get("Title"),
-            "Image" => $request->get("Image"),
-            "CategoryId" => $request->get("CategoryId"),
+            // "Image" => $request->get("Image"),
+            // "CategoryId" => $request->get("CategoryId"),
             // "Specification" => $request->get("Specification"),
             // "Dimension" => $request->get("Dimension"),
             // "Application" => $request->get("Application"),
             "Description" => $request->get("Description"),
-            "Status" => 1,
+            // "Status" => 1,
         ]);
 
         return redirect()->route("admin.product.index")->withErrors([
@@ -107,13 +107,13 @@ class ProductController extends Controller
         $request->validated();
 
         $product->Title = $request->get("Title");
-        $product->Image = $request->get("Image");
-        $product->CategoryId = $request->get("CategoryId");
+        // $product->Image = $request->get("Image");
+        // $product->CategoryId = $request->get("CategoryId");
         // $product->Specification = $request->get("Specification");
         // $product->Dimension = $request->get("Dimension");
         // $product->Application = $request->get("Application");
         $product->Description = $request->get("Description");
-        $product->Status = 1;
+        // $product->Status = 1;
         $product->save();
 
         return redirect()->route("admin.product.index")->withErrors([
