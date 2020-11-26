@@ -119,7 +119,7 @@ a:focus {
 
 .media > .pull-left {
     /* margin-right: 20px; */
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
