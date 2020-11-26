@@ -13,14 +13,14 @@
                         <label class="col-sm-6 col-form-label" for="date-created">Date Create</label>
                         <div class="col-sm-6 d-flex align-items-center justify-content-end">
                             {{date("d/m/Y H:i:s")}}
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-outline-primary">Save Change</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-outline-primary">Save Change</button>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
     @endslot --}}
 
@@ -35,31 +35,32 @@
 
     <div class="form-group">
         <label for="example-select">Choose The Type of Service</label>
-            <select class="form-control" id="example-select" name="">
-              
-                    <option value="1">Solution</option>
-                    <option value="2">Training</option>
-            </select>
+        <select class="form-control" id="example-select" name="">
+            <option value="1">Solution</option>
+            <option value="2">Training</option>
+        </select>
     </div>
 
     <div class="form-group">
         <label for="">Avatar</label>
         <div class="input-group">
-            <input type="text" class="form-control @error("Image") is-invalid @enderror" id="Image" name="Image"
-                placeholder="Hình ảnh" value="{{!old("Image") ? $service->Image ?? false ? $service->Image : old("Image") : old("Image") }}">
+            <input type="text" class="form-control @error(" Image") is-invalid @enderror" id="Image" name="Image"
+                placeholder="Hình ảnh"
+                value="{{!old("Image") ? $service->Image ?? false ? $service->Image : old("Image") : old("Image") }}">
             <div class="input-group-append">
                 <button type="button" class="btn btn-dark" onclick="selectFileCKFinder('Image')">Choose Image</button>
             </div>
         </div>
 
         @error('Image')
-            <small class="text-danger">{{$message}}</small>
+        <small class="text-danger">{{$message}}</small>
         @enderror
     </div>
 
     <div class="form-group">
-        <label for="editor" class="@error("Description") text-danger @enderror">Description</label>
-        <textarea id="editor" class="form-control" name="Description" rows="3">{{!old("Description") ? $service->Description ?? false ? $service->Description : old("Description") : old("Description") }}</textarea>
+        <label for="editor" class="@error(" Description") text-danger @enderror">Description</label>
+        <textarea id="editor" class="form-control" name="Description"
+            rows="3">{{!old("Description") ? $service->Description ?? false ? $service->Description : old("Description") : old("Description") }}</textarea>
     </div>
 
     @endslot

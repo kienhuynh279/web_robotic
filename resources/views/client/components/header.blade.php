@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{ route('home') }}"><img
-                        src="{{ asset('assets/client/images/logo_.ico') }}" alt="logo"></a>
+                        src="{{ asset('assets/client/images/logo_.png') }}" alt="logo"></a>
             </div>
 
             <div class="collapse navbar-collapse navbar-right">
