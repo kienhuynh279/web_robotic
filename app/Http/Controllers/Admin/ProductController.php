@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Models\Product;
-use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -24,12 +23,10 @@ class ProductController extends Controller
                 "Title", "like", "%".$request->get("title")."%"
             ]);
         }
-        $category = Category::all();
         $product = Product::where($filter)->paginate(20);
 
         return view("admin.product.index")->with([
             "product" => $product,
-            "cate" => $category
         ]);
     }
 
@@ -40,9 +37,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $category = Category::all();
         return view("admin.product.create",[
-            "category" => $category
         ]);
     }
 
@@ -58,13 +53,13 @@ class ProductController extends Controller
 
         Product::create([
             "Title" => $request->get("Title"),
-            "Image" => $request->get("Image"),
-            "CategoryId" => $request->get("CategoryId"),
+            // "Image" => $request->get("Image"),
+            // "CategoryId" => $request->get("CategoryId"),
             // "Specification" => $request->get("Specification"),
             // "Dimension" => $request->get("Dimension"),
             // "Application" => $request->get("Application"),
             "Description" => $request->get("Description"),
-            "Status" => 1,
+            // "Status" => 1,
         ]);
 
         return redirect()->route("admin.product.index")->withErrors([
@@ -91,12 +86,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::all();
         $product = Product::findOrFail($id);
 
         return view("admin.product.edit")->with([
             "product" => $product,
-            "category" => $category
         ]);
     }
 
@@ -114,13 +107,13 @@ class ProductController extends Controller
         $request->validated();
 
         $product->Title = $request->get("Title");
-        $product->Image = $request->get("Image");
-        $product->CategoryId = $request->get("CategoryId");
+        // $product->Image = $request->get("Image");
+        // $product->CategoryId = $request->get("CategoryId");
         // $product->Specification = $request->get("Specification");
         // $product->Dimension = $request->get("Dimension");
         // $product->Application = $request->get("Application");
         $product->Description = $request->get("Description");
-        $product->Status = 1;
+        // $product->Status = 1;
         $product->save();
 
         return redirect()->route("admin.product.index")->withErrors([

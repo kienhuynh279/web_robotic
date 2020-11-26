@@ -35,10 +35,12 @@
 
     <div class="form-group">
         <label for="example-select">Choose The Type of Service</label>
-        <select class="form-control" id="example-select" name="">
-            <option value="1">Solution</option>
-            <option value="2">Training</option>
-        </select>
+            <select class="form-control" id="example-select" name="TypeId">
+              
+                    <option value="1" @if(intval(old('TypeId')) === 1) selected @elseif($service ?? false ? intval($service->TypeId) === 1 : false) selected @endif>Solution</option>
+                    <option value="2" @if(intval(old('TypeId')) === 2) selected @elseif($service ?? false ? intval($service->TypeId) === 2 : false) selected @endif>Training</option>
+            </select>
+
     </div>
 
     <div class="form-group">

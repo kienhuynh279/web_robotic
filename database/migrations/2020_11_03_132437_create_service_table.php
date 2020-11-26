@@ -15,13 +15,12 @@ class CreateServiceTable extends Migration
     {
         Schema::create('service', function (Blueprint $table) {
             $table->increments('ServiceId');
-            $table->unsignedInteger('TypeId')->unsigned();
+            $table->tinyInteger('TypeId');
             $table->string('Title');
             $table->text('Image');
             $table->text('Description')->nullable()->default(null);
             $table->timestamps();   
             $table->tinyInteger('Status')->default('1');
-            $table->foreign('TypeId')->references('TypeId')->on('Type');
         });
     }
 

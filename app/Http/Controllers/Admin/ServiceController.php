@@ -40,9 +40,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        $type = Type::all();
         return view("admin.service.create", [
-            "type" => $type
         ]);
     }
 
@@ -89,10 +87,8 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::findOrFail($id);
-        $type = Type::all();
         return view("admin.service.edit")->with([
             "service" => $service,
-            "type" => $type
         ]);
     }
 

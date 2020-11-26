@@ -15,17 +15,9 @@ class CreateProductTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->increments('ProductId');
-            $table->unsignedInteger('CategoryId');
             $table->string('Title');
-            $table->text('Image');
-            $table->text('Specification')->nullable()->default(null);
-            $table->text('Dimension')->nullable()->default(null);
-            $table->text('Application')->nullable()->default(null);
-            $table->text('Description')->nullable()->default(null);
+            $table->text('Description')->nullable();
             $table->timestamps();   
-            $table->tinyInteger('Status')->default('1');
-
-            $table->foreign('CategoryId')->references('CategoryId')->on('Category');
         });
     }
 
