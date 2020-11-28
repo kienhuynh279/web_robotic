@@ -7,8 +7,8 @@
             </ol>
             <div class="carousel-inner" style="position: relative;">
 
-                @foreach ($banners as $banner)
-                <div class="item @if($banner->BannerId === 1) active @endif" @if($banner->Background) style="background-image: url({{ $banner->Background }})" @endif>
+                @foreach ($banners as $i => $banner)
+                <div class="item @if($i === 1) active @endif" @if($banner->Background) style="background-image: url({{ $banner->Background }})" @endif>
                     @if ($banner->Video)
                         <div style="position: absolute;
                         right: 0;
