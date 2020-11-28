@@ -16,7 +16,7 @@ Trang tài liệu
                 <div class="blog-item">
                     <img class="img-responsive img-blog" src="{{ $news->Image }}" width="100%" alt="" />
                     <div class="row">
-                      
+
                         <div class="col-xs-12 col-sm-10 blog-content">
                             <h2>{{$news->Title}}</h2>
                             <p>{!!$news->Description!!}</p>
@@ -42,11 +42,13 @@ Trang tài liệu
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="single_comments">
-                                <img width="90px" src="{{ $i->Image }}" alt="" />
-                                <p>{{$i->Title}} </p>
-                                <div class="entry-meta small muted">
-                                  
-                                </div>
+                                <a href="{{ route('detailNew', $i->NewId) }}') }}">
+                                    <img width="90px" src="{{ $i->Image }}" alt="" />
+                                    <p>{{$i->Title}} </p>
+                                    <div class="entry-meta small muted">
+                                    </div>
+                                </a>
+
                             </div>
                         </div>
                     </div>

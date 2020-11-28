@@ -50,9 +50,9 @@ class ServiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ServiceRequest $request)
+    public function store(Request $request)
     {
-        $request->validated();
+        // $request->validated();
 
         Service::create([
             "Title" => $request->get("Title"),

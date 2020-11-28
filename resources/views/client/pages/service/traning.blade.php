@@ -19,7 +19,7 @@
 
             <div class="col-md-3 wow fadeInDown">
                 <div class="clients-comments text-center">
-                    <img style="object-fit: cover; object-position: center" src="{{ $item->Image }}"  alt="">
+                    <img src="{{ $item->Image }}"  alt="">
                     <h3>{{$item->Title}}</h3>
                 </div>
             </div>

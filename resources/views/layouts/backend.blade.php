@@ -289,38 +289,38 @@
         //     true
         // ),
 
-        // module(
-        //     "Manage Category Service",
-        //     'admin/type',
-        //     "#",
-        //     "fa fa-bookmark",
-        //     [
-        //         module(
-        //             "List Category",
-        //             'admin/type/',
-        //             route("admin.type.index"),
-        //             "fa fa-list",
-        //             [
+        module(
+            "Manage About",
+            'admin/about',
+            "#",
+            "fa fa-bookmark",
+            [
+                module(
+                    "List About",
+                    'admin/about/',
+                    route("admin.about.index"),
+                    "fa fa-list",
+                    [
                         
-        //             ] ,
-        //             null,
-        //             true
-        //         ),
-        //         module(
-        //             "Add Category",
-        //             'admin/type/create',
-        //             route("admin.type.create"),
-        //             "fa fa-edit",
-        //             [
+                    ] ,
+                    null,
+                    true
+                ),
+                module(
+                    "Add About",
+                    'admin/about/create',
+                    route("admin.about.create"),
+                    "fa fa-edit",
+                    [
                         
-        //             ] ,
-        //             null,
-        //             true
-        //         ),
-        //     ],
-        //     "",
-        //     true
-        // ),
+                    ] ,
+                    null,
+                    true
+                ),
+            ],
+            "",
+            true
+        ),
 
         module(
             "Manage Banner",

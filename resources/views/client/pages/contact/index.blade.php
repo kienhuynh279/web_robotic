@@ -14,9 +14,11 @@ Trang tài liệu
             <div class="container">
                 <div class="row">
                     <div class="col-sm-5 text-center">
-                        <div class="gmap">
-                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=JoomShaper,+Dhaka,+Dhaka+Division,+Bangladesh&amp;aq=0&amp;oq=joomshaper&amp;sll=37.0625,-95.677068&amp;sspn=42.766543,80.332031&amp;ie=UTF8&amp;hq=JoomShaper,&amp;hnear=Dhaka,+Dhaka+Division,+Bangladesh&amp;ll=23.73854,90.385504&amp;spn=0.001515,0.002452&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=1073661719450182870&amp;output=embed"></iframe>
-                        </div>
+                        {{-- <div class="gmap"> --}}
+                            <img src="{{ asset('assets/client/images/about/map.png') }}" alt="">
+                        {{-- <iframe src="" frameborder="0"></iframe> --}}
+                            {{-- <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=JoomShaper,+Dhaka,+Dhaka+Division,+Bangladesh&amp;aq=0&amp;oq=joomshaper&amp;sll=37.0625,-95.677068&amp;sspn=42.766543,80.332031&amp;ie=UTF8&amp;hq=JoomShaper,&amp;hnear=Dhaka,+Dhaka+Division,+Bangladesh&amp;ll=23.73854,90.385504&amp;spn=0.001515,0.002452&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=1073661719450182870&amp;output=embed"></iframe> --}}
+                        {{-- </div> --}}
                     </div>
 
                     <div class="col-sm-7 map-content">
@@ -52,7 +54,7 @@ Trang tài liệu
         </div>
     </section>  <!--/gmap_area -->
 
-    <section id="contact-page">
+    {{-- <section id="contact-page">
         <div class="container">
             <div class="center">        
                 <h2>Drop Your Message</h2>               
@@ -89,12 +91,12 @@ Trang tài liệu
                         </div>                        
                         <div class="form-group">
                             <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
-                        </div>
+                        </div>s
                     </div>
                 </form> 
             </div><!--/.row-->
         </div><!--/.container-->
-    </section><!--/#contact-page-->
+    </section><!--/#contact-page--> --}}
 
 @endsection
 
