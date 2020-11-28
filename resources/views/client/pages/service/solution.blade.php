@@ -13,15 +13,16 @@ Solution
         <div class="row">
             @foreach ($solutions as $item)
             <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap-detail wow fadeInDown" style="height: auto; max-height: 100%">
-                    <div style="display: flex">
-                        <div class="pull-left">
-                            <img style="object-fit: cover; object-position: center; height: 100px; width: 100px" class="img-responsive" src="{{$item->Image}}">
-                        </div>
+                <div class="media services-wrap-detail wow fadeInDown" style="height: auto; max-height: 100%; padding: 15px">
+                    <div class="" style="display: flex">
+                        <img class="img-responsive"
+                            style="object-fit: cover; object-position: center; height: 100px; width: 100px"
+                            src="{{$item->Image}}">
                         <div class="media-body" style="margin-left: 20px">
                             <p>{{ $item->Title }}</p>
-                        </div></div>
-                   
+                        </div>
+                    </div>
+
                 </div>
             </div>
             @endforeach
