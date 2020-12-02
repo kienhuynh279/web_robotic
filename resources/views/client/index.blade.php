@@ -117,14 +117,13 @@ Trang chủ
             <h2>Our Partners</h2>
             {{-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> --}}
         </div>
-
         <div class="partners">
             <ul>
                 <li> <a href="#"><img style="height: 100px;" class="img-responsive wow fadeInDown" data-wow-duration="1000ms"
                             data-wow-delay="300ms" src="https://arar.vn//userfiles/images/home/2_.png"/></a></li>
-                <li> <a href="#"><img style="height: 100px; " class="img-responsive wow fadeInDown" data-wow-duration="1000ms"
+                <li> <a href="#"><img style="height: 100px;" class="img-responsive wow fadeInDown" data-wow-duration="1000ms"
                             data-wow-delay="600ms" src="https://arar.vn//userfiles/images/home/3.png"/></a></li>
-                <li> <a href="#"><img style="height: 100px; margin-left:100px" class="img-responsive wow fadeInDown" data-wow-duration="1000ms"
+                <li> <a href="#"><img style="height: 100px;" class="img-responsive wow fadeInDown" data-wow-duration="1000ms"
                             data-wow-delay="900ms" src="https://arar.vn//userfiles/images/home/4.png"/></a></li>
             </ul>
         </div>

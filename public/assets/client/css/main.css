@@ -1012,12 +1012,21 @@ a.accordion-toggle i {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .partners ul li {
     display: inline-block;
     /* float: left; */
-    width: 20%;
+    width: 33.3333333%;
+    margin: auto;
+}
+
+.partners ul li a img {
+    width: 100%;
+    object-fit: contain;
 }
 
 #conatcat-info {

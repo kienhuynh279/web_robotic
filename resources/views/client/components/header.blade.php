@@ -2,6 +2,13 @@
     <div class="top-bar">
         <div class="container">
             <div class="row">
+                <style>
+                    @media screen and (max-width: 767px) {
+                        .top-number {
+                            display: none;
+                        }
+                    }
+                </style>
                 <div class="col-sm-6 col-xs-4">
                     <div class="top-number">
                         <p><i class="fa fa-phone-square"></i> 0913 681353 – 0778 805 117 - (+84) 366 818 469 | <i
@@ -33,6 +40,25 @@
     <nav class="navbar navbar-inverse" role="banner">
         <div class="container">
             <div class="navbar-header">
+                <style>
+                    .navbar-toggle .icon-bar {
+                        background-color: black!important;
+                    }
+                    .navbar-toggle:hover .icon-bar {
+                        background-color: white!important;
+                    }
+                    .navbar-toggle.collapsed .icon-bar {
+                        background-color: black !important;
+                    }
+
+                    .navbar-toggle.collapsed .icon-bar:hover {
+                        background-color: #fff;
+                    }
+
+                    .navbar-toggle .icon-bar {
+                        background-color: #fff;
+                    }
+                </style>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -61,7 +87,7 @@
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Services <i
                                 class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                            
+
                             <li><a href="{{ route('solution') }}">Solutions</a></li>
                             <li><a href="{{ route('traning') }}">Training</a></li>
                         </ul>
@@ -72,13 +98,14 @@
                                 class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('news') }}">News</a></li>
-                            {{-- <li><a href="{{ route('gallery') }}">GALLERY</a></li> --}}
-                            {{-- <li><a href="{{ route('news') }}">DOCUMENTS</a></li> --}}
-                        </ul>
-                    </li>
+                            {{-- <li><a href="{{ route('gallery') }}">GALLERY</a>
+                    </li> --}}
+                    {{-- <li><a href="{{ route('news') }}">DOCUMENTS</a></li> --}}
+                </ul>
+                </li>
 
-                    <li class=""><a class="{{ activeMenu('/about') }}" href="{{ route('about') }}">ABOUT US</a></li>
-                    <li class="{{activeMenu('/contact')}}"><a href="{{ route('contact') }}">Contact</a></li>
+                <li class=""><a class="{{ activeMenu('/about') }}" href="{{ route('about') }}">ABOUT US</a></li>
+                <li class="{{activeMenu('/contact')}}"><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
             </div>
         </div>
